@@ -6,6 +6,12 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <style>
+        .buttonDelete{
+            border: 2px solid red;
+        }
+    </style>
+
 </head>
 <body id="PageBody" runat="server">
     <form id="form1" runat="server">
@@ -25,7 +31,22 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label1" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Nombre de Usuario" ></asp:Label>
                 <asp:ImageButton ID="ImageButton7" runat="server" Height="40px" ImageUrl="img\user.png" Width="40px"/>
 </asp:Panel>
-            <asp:Panel ID="Panel1" runat="server" BackColor="#9332C0" Height="159px">
+            <asp:Panel ID="Panel1" runat="server" BackColor="#9332C0" Height="371px">
+                <asp:ImageMap ID="perfilImage" runat="server" Height="40px" ImageUrl="img\user.png" Width="40px">
+                </asp:ImageMap>
+                <asp:Label ID="perfilName" runat="server" Text="Nombre de usuario"></asp:Label><br />
+
+                <asp:Label ID="labelEmailAsociado" runat="server" Text="Email asociado"></asp:Label><br />
+                <asp:TextBox ID="textBoxEmailAsociado" runat="server"></asp:TextBox><br /><br />
+
+                <asp:Label ID="labelCedulaAsociada" runat="server" Text="Cédula asociada"></asp:Label><br />
+                <asp:TextBox ID="textBoxCedulaAsociada" runat="server"></asp:TextBox><br /><br />
+
+                <asp:Label ID="labelTelefono" runat="server" Text="Número de teléfono"></asp:Label><br />
+                <asp:TextBox ID="textBoxTelefono" runat="server"></asp:TextBox><br /><br />
+
+                <asp:Button ID="buttonDelete" runat="server" Text="Eliminar cuenta" CssClass="buttonDelete"/>
+
             </asp:Panel>
         </div>
     </form>

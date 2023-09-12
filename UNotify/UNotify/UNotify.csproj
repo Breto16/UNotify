@@ -67,17 +67,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="FomrCrearEvento.aspx" />
+    <Content Include="viewCreateEvent.aspx" />
     <Content Include="index.aspx" />
+    <Content Include="viewUser.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FomrCrearEvento.aspx.cs">
-      <DependentUpon>FomrCrearEvento.aspx</DependentUpon>
+    <Compile Include="viewCreateEvent.aspx.cs">
+      <DependentUpon>viewCreateEvent.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="FomrCrearEvento.aspx.designer.cs">
-      <DependentUpon>FomrCrearEvento.aspx</DependentUpon>
+    <Compile Include="viewCreateEvent.aspx.designer.cs">
+      <DependentUpon>viewCreateEvent.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -87,6 +88,13 @@
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="viewUser.aspx.cs">
+      <DependentUpon>viewUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewUser.aspx.designer.cs">
+      <DependentUpon>viewUser.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
