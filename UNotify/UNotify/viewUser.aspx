@@ -7,8 +7,52 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style>
+        .titleUser{
+            color: #ffffff;
+            display: inline-block;
+            font-size: 1.6em;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        .labelInfo{
+            color: #ffffff;
+            font-size: 1.3em;
+            font-weight: 900;
+        }
+
+        .textBoxInfo{
+            border: 1px solid #9332C0;
+            border-radius: 10px;
+            width: 40%;
+            height:7%;
+            background-color: #16191C;
+            color: #ffffff;
+        }
+
+        .panelInfoUser{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         .buttonDelete{
+            background-color: #16191C;
+            margin-left: 20px;
             border: 2px solid red;
+            border-radius: 5px;
+            width: 20%;
+            height: 10%;
+            color: #ffffff;
+        }
+
+        .userContainer{
+            border: 2px solid #9332C0;
+            border-radius: 10px;
+            display: inline-block;
+            height: 60%;
+            width: 75%;
+            padding: 20px;
         }
     </style>
 
@@ -31,22 +75,23 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label1" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Nombre de Usuario" ></asp:Label>
                 <asp:ImageButton ID="ImageButton7" runat="server" Height="40px" ImageUrl="img\user.png" Width="40px"/>
 </asp:Panel>
-            <asp:Panel ID="Panel1" runat="server" BackColor="#9332C0" Height="371px">
-                <asp:ImageMap ID="perfilImage" runat="server" Height="40px" ImageUrl="img\user.png" Width="40px">
-                </asp:ImageMap>
-                <asp:Label ID="perfilName" runat="server" Text="Nombre de usuario"></asp:Label><br />
+            <asp:Panel ID="Panel1" runat="server" BackColor="#16191C" Height="684px" CssClass="panelInfoUser">
+                <div class="userContainer">
+                    <asp:ImageMap ID="perfilImage" runat="server" Height="60px" ImageUrl="img\user.png" Width="60px">
+                    </asp:ImageMap>
+                    <asp:Label ID="perfilNameTitle" CssClass="titleUser" runat="server" Text="Nombre de usuario"></asp:Label><br />
 
-                <asp:Label ID="labelEmailAsociado" runat="server" Text="Email asociado"></asp:Label><br />
-                <asp:TextBox ID="textBoxEmailAsociado" runat="server"></asp:TextBox><br /><br />
+                    <asp:Label ID="labelEmailAsociado" CssClass="labelInfo" runat="server" Text="Email asociado"></asp:Label><br />
+                    <asp:TextBox ID="textBoxEmailAsociado" CssClass="textBoxInfo" runat="server"></asp:TextBox><br /><br />
 
-                <asp:Label ID="labelCedulaAsociada" runat="server" Text="Cédula asociada"></asp:Label><br />
-                <asp:TextBox ID="textBoxCedulaAsociada" runat="server"></asp:TextBox><br /><br />
+                    <asp:Label ID="labelCedulaAsociada" CssClass="labelInfo" runat="server" Text="Cédula asociada"></asp:Label><br />
+                    <asp:TextBox ID="textBoxCedulaAsociada" CssClass="textBoxInfo" runat="server"></asp:TextBox><br /><br />
 
-                <asp:Label ID="labelTelefono" runat="server" Text="Número de teléfono"></asp:Label><br />
-                <asp:TextBox ID="textBoxTelefono" runat="server"></asp:TextBox><br /><br />
+                    <asp:Label ID="labelTelefono" CssClass="labelInfo" runat="server" Text="Número de teléfono"></asp:Label><br />
+                    <asp:TextBox ID="textBoxTelefono" CssClass="textBoxInfo" runat="server"></asp:TextBox><br /><br />
 
-                <asp:Button ID="buttonDelete" runat="server" Text="Eliminar cuenta" CssClass="buttonDelete"/>
-
+                    <asp:Button ID="buttonDelete" runat="server" Text="Eliminar cuenta" CssClass="buttonDelete"/>
+                </div>
             </asp:Panel>
         </div>
     </form>

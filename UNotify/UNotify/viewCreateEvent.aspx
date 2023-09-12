@@ -6,6 +6,66 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <style>
+        .titleCenter{
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.7em;
+            color: #fff;
+        }
+
+        .textBoxEvent{
+            border: 2px solid #9332C0;
+            border-radius: 10px;
+            margin: 0 5px;
+            padding: 5px;
+            width: 50%;
+            height: 7%;
+            background-color:#16191C;
+            color: #ffffff;
+        }
+
+        .labelEventForm{
+            display: inline-block;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.3em;
+            margin: 5px 5px;
+            color: #fff;
+        }
+
+        .buttonEvent{
+            border: 1px solid #9332C0;
+            border-radius: 10px;
+            display: block; 
+            margin: 0 auto;
+            margin-top: 15px;
+            width: 25%;
+            height: 7%;
+            font-size: 90%;
+            font-weight: 900;
+            background-color: #16191C;
+            color: #fff;
+        }
+
+        .firstContainer{
+            display:flex;
+            justify-content: space-betwwen;
+            align-items: center;
+        }
+
+        #containerDataEvent{
+            display: inline-block;
+            width: 50%;
+            height: 70%;
+        }
+
+        #containerColabs{
+             display: inline-block;
+             width: 50%;
+             height: 70%;
+}       }
+    </style>
 </head>
 <body id="PageBody" runat="server">
     <form id="form1" runat="server">
@@ -25,25 +85,26 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label1" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Nombre de Usuario" ></asp:Label>
                 <asp:ImageButton ID="ImageButton7" runat="server" Height="40px" ImageUrl="img\user.png" Width="40px"/>
 </asp:Panel>
-            <asp:Panel ID="Panel1" runat="server" BackColor="#9332C0" Height="345px">
-                <asp:Label ID="createEventTitle" runat="server" Text="Crear nuevo evento" Font-Bold="True" Font-Size="X-Large"></asp:Label><br />
+            <asp:Panel ID="Panel1" runat="server" BackColor="#16191C" Height="624px" CssClass="firstContainer" Style="padding-left: 15px;">
+                <div id="containerDataEvent">
+                    <asp:Label ID="createEventTitle" runat="server" Text="Crear nuevo evento" Font-Bold="True" CssClass="titleCenter"></asp:Label><br />
 
-                <asp:Label ID="labelNameEvent" runat="server" Text="Ingresa el nombre del evento"></asp:Label><br />
-                <asp:TextBox ID="textBoxNameEvent" runat="server" Placeholder="Puede contener hasta 90 caracteres"></asp:TextBox><br />
+                    <asp:Label ID="labelNameEvent" CssClass="labelEventForm" runat="server" Text="Ingresa el nombre del evento"></asp:Label><br />
+                    <asp:TextBox ID="textBoxNameEvent" CssClass="textBoxEvent" runat="server" Placeholder="Puede contener hasta 90 caracteres"></asp:TextBox><br />
 
-                <asp:Label ID="labelDateTimeEvent" runat="server" Text="I">Ingresa el dia y la hora (inicio-fin) del evento</asp:Label><br />
-                <asp:TextBox ID="textBoxDateTimeEvent" runat="server"></asp:TextBox><br />
+                    <asp:Label ID="labelDateTimeEvent" CssClass="labelEventForm" runat="server" Text="I">Ingresa el dia y la hora (inicio-fin) del evento</asp:Label><br />
+                    <asp:TextBox ID="textBoxDateTimeEvent" CssClass="textBoxEvent" runat="server" Placeholder="Debe ser en el formato DD/MM/AAAA XX-XX:XX"></asp:TextBox><br />
 
-                <asp:Label ID="labelCapacityMax" runat="server" Text="Ingresa la capacidad máxima de personas del evento"></asp:Label><br />
-                <asp:TextBox ID="textBoxCapacityMax" runat="server"></asp:TextBox><br />
+                    <asp:Label ID="labelCapacityMax" CssClass="labelEventForm" runat="server" Text="Ingresa la capacidad máxima de personas del evento"></asp:Label><br />
+                    <asp:TextBox ID="textBoxCapacityMax" CssClass="textBoxEvent" runat="server" Placeholder="Debe ser número entero"></asp:TextBox><br />
 
-                <asp:Label ID="labelActivities" runat="server" Text="Agrega las actividades que se harán en el evento"></asp:Label><br />
-                <asp:TextBox ID="textBoxActivities" runat="server"></asp:TextBox><br /><br />
+                    <asp:Label ID="labelActivities" CssClass="labelEventForm" runat="server" Text="Agrega las actividades que se harán en el evento"></asp:Label><br />
+                    <asp:TextBox ID="textBoxActivities" CssClass="textBoxEvent" runat="server" Placeholder="Utiliza preferiblemente viñetas" TextMode="MultiLine"></asp:TextBox><br /><br />
 
-                <asp:Button ID="buttonCreateEvent" runat="server" Text="Crear Evento" />
- 
-                <div id="containerColabas">
-                    <asp:Label ID="titleColabs" runat="server" Text="Agregar colaboradores" Font-Bold="True" Font-Size="X-Large"></asp:Label><br />
+                    <asp:Button ID="buttonCreateEvent" runat="server" Text="Crear Evento" CssClass="buttonEvent"/>
+                </div>
+                <div id="containerColabs">
+                    <asp:Label ID="titleColabs" runat="server" Text="Agregar colaboradores" Font-Bold="True" CssClass="titleCenter"></asp:Label><br />
                     <asp:Label ID="Label3" runat="server" Text="* Username colaborador"></asp:Label>
                 </div>
             </asp:Panel>

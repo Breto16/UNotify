@@ -159,84 +159,111 @@ namespace UNotify
         protected global::System.Web.UI.WebControls.Panel Panel1;
 
         /// <summary>
-        /// Control perfilImage.
+        /// Control createEventTitle.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageMap perfilImage;
+        protected global::System.Web.UI.WebControls.Label createEventTitle;
 
         /// <summary>
-        /// Control perfilName.
+        /// Control labelNameEvent.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label perfilName;
+        protected global::System.Web.UI.WebControls.Label labelNameEvent;
 
         /// <summary>
-        /// Control labelEmailAsociado.
+        /// Control textBoxNameEvent.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label labelEmailAsociado;
+        protected global::System.Web.UI.WebControls.TextBox textBoxNameEvent;
 
         /// <summary>
-        /// Control textBoxEmailAsociado.
+        /// Control labelDateTimeEvent.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox textBoxEmailAsociado;
+        protected global::System.Web.UI.WebControls.Label labelDateTimeEvent;
 
         /// <summary>
-        /// Control labelCedulaAsociada.
+        /// Control textBoxDateTimeEvent.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label labelCedulaAsociada;
+        protected global::System.Web.UI.WebControls.TextBox textBoxDateTimeEvent;
 
         /// <summary>
-        /// Control textBoxCedulaAsociada.
+        /// Control labelCapacityMax.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox textBoxCedulaAsociada;
+        protected global::System.Web.UI.WebControls.Label labelCapacityMax;
 
         /// <summary>
-        /// Control labelTelefono.
+        /// Control textBoxCapacityMax.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label labelTelefono;
+        protected global::System.Web.UI.WebControls.TextBox textBoxCapacityMax;
 
         /// <summary>
-        /// Control textBoxTelefono.
+        /// Control labelActivities.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox textBoxTelefono;
+        protected global::System.Web.UI.WebControls.Label labelActivities;
 
         /// <summary>
-        /// Control buttonDelete.
+        /// Control textBoxActivities.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button buttonDelete;
+        protected global::System.Web.UI.WebControls.TextBox textBoxActivities;
+
+        /// <summary>
+        /// Control buttonCreateEvent.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button buttonCreateEvent;
+
+        /// <summary>
+        /// Control titleColabs.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label titleColabs;
+
+        /// <summary>
+        /// Control Label3.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label3;
     }
 }
