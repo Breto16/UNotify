@@ -69,6 +69,8 @@
   <ItemGroup>
     <Content Include="viewCreateEvent.aspx" />
     <Content Include="index.aspx" />
+    <Content Include="viewEventDetailsUser.aspx" />
+    <Content Include="viewSuggestEvent.aspx" />
     <Content Include="viewUser.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -88,6 +90,20 @@
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="viewEventDetailsUser.aspx.cs">
+      <DependentUpon>viewEventDetailsUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewEventDetailsUser.aspx.designer.cs">
+      <DependentUpon>viewEventDetailsUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewSuggestEvent.aspx.cs">
+      <DependentUpon>viewSuggestEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewSuggestEvent.aspx.designer.cs">
+      <DependentUpon>viewSuggestEvent.aspx</DependentUpon>
+    </Compile>
     <Compile Include="viewUser.aspx.cs">
       <DependentUpon>viewUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
