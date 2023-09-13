@@ -7,6 +7,32 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style>
+        .textBoxForumComment{
+            color: #ffffff;
+            resize: none;
+            overflow-block: auto;
+            margin-left: 15px;
+            margin-top: 10px;
+            width:50vw;
+            height: 12vh;
+            background-color: #1E2126;
+            border: none;
+            border-radius: 5px;
+
+            scrollbar-width: thin;
+        }
+
+        .buttonPost{
+            width: 13vw;
+            height: 5vh;
+            margin-left: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #9332C0;
+            border-radius: 10px;
+            margin-top: 2%;
+            background-color: #16191C;
+            color: #fff;
+        }
 
         .titleActivities{
             font-size: 1.5em;
@@ -58,6 +84,7 @@
         }
 
         #containerForumEvent{
+            margin-top: 15px;
             height: 40%;
         }
 
@@ -105,6 +132,10 @@
                 </div>
                 <div id="containerForumEvent">
                     <asp:Label ID="titleForum" CssClass="titleForum" runat="server" Text="Foro de discusión"></asp:Label>
+                    <div style="display: flex; align-items: center;">
+                        <asp:TextBox CssClass="textBoxForumComment" ID="TextBox1" runat="server" Placeholder="Comenté lo que desee, siempre y cuando se mantenga el respeto" TextMode="MultiLine"></asp:TextBox>
+                        <asp:Button ID="buttonPost" CssClass="buttonPost" runat="server" Text="Button" />
+                    </div>
                 </div>
             </asp:Panel>
     </form>
