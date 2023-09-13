@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="UNotify.index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="viewUser.aspx.cs" Inherits="UNotify.viewUser" %>
 
 <!DOCTYPE html>
 
@@ -59,7 +59,6 @@
 </head>
 <body id="PageBody" runat="server">
     <form id="form1" runat="server">
-        <div style="height: 385px">
             <asp:Panel ID="Panel2" runat="server" display="flex" BackColor="#1E2126" Height="45px" HorizontalAlign="Right">
                 <asp:ImageButton ID="ImageButton8" runat="server" Float="right" Height="40px" Width="40px" ImageUrl="img\logout.png"/>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -68,32 +67,31 @@
                 <asp:Label ID="lbl_colabs" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Añadir Colaborador"></asp:Label>
                 <asp:ImageButton ID="ImageButton5" runat="server" Height="40px" ImageUrl="img\explorar.png" Width="40px" />
                 <asp:Label ID="lbl_explorar" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Explorar"></asp:Label>
-                <asp:ImageButton ID="ImageButton2" runat="server" Height="40px" ImageUrl="img\new-document.png" Width="40px" OnClick="ImageButton2_Click"/>
+                <asp:ImageButton ID="ImageButton2" runat="server" Height="40px" Width="40px" />
                 <asp:Label ID="lbl_sugerir" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Sugerir Evento"></asp:Label>
                 <asp:ImageButton ID="ImageButton6" runat="server" Height="40px" ImageUrl="img\calendar.png" Width="40px" />
                 <asp:Label ID="Label2" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Calendario"></asp:Label>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label1" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Nombre de Usuario" ></asp:Label>
                 <asp:ImageButton ID="ImageButton7" runat="server" Height="40px" ImageUrl="img\user.png" Width="40px"/>
-</asp:Panel>
-            <asp:Panel ID="Panel1" runat="server" BackColor="#16191C" Height="684px" CssClass="panelInfoUser">
+            </asp:Panel>
+            <asp:Panel ID="Panel1" runat="server" BackColor="#16191C" Height="524px" CssClass="panelInfoUser">
                 <div class="userContainer">
                     <asp:ImageMap ID="perfilImage" runat="server" Height="60px" ImageUrl="img\user.png" Width="60px">
                     </asp:ImageMap>
                     <asp:Label ID="perfilNameTitle" CssClass="titleUser" runat="server" Text="Nombre de usuario"></asp:Label><br />
 
                     <asp:Label ID="labelEmailAsociado" CssClass="labelInfo" runat="server" Text="Email asociado"></asp:Label><br />
-                    <asp:TextBox ID="textBoxEmailAsociado" CssClass="textBoxInfo" runat="server"></asp:TextBox><br /><br />
+                    <asp:TextBox ID="textBoxEmailAsociado" CssClass="textBoxInfo" runat="server" ReadOnly="true"></asp:TextBox><br /><br />
 
                     <asp:Label ID="labelCedulaAsociada" CssClass="labelInfo" runat="server" Text="Cédula asociada"></asp:Label><br />
-                    <asp:TextBox ID="textBoxCedulaAsociada" CssClass="textBoxInfo" runat="server"></asp:TextBox><br /><br />
+                    <asp:TextBox ID="textBoxCedulaAsociada" CssClass="textBoxInfo" runat="server" ReadOnly="true"></asp:TextBox><br /><br />
 
-                    <asp:Label ID="labelTelefono" CssClass="labelInfo" runat="server" Text="Número de teléfono"></asp:Label><br />
-                    <asp:TextBox ID="textBoxTelefono" CssClass="textBoxInfo" runat="server"></asp:TextBox><br /><br />
+                    <asp:Label ID="labelEsColab" CssClass="labelInfo" runat="server" Text="Es colaborador:"></asp:Label><br />
+                    <asp:TextBox ID="textEsColab" CssClass="textBoxInfo" runat="server" ReadOnly="true"></asp:TextBox><br /><br />
 
                     <asp:Button ID="buttonDelete" runat="server" Text="Eliminar cuenta" CssClass="buttonDelete"/>
                 </div>
             </asp:Panel>
-        </div>
     </form>
 </body>
 </html>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="UNotify.index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="viewSuggestEvent.aspx.cs" Inherits="UNotify.viewSuggestEvent" %>
 
 <!DOCTYPE html>
 

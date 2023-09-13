@@ -11,7 +11,7 @@ namespace UNotify
 {
 
 
-    public partial class index
+    public partial class viewSuggestEvent
     {
 
         /// <summary>
@@ -159,66 +159,111 @@ namespace UNotify
         protected global::System.Web.UI.WebControls.Panel Panel1;
 
         /// <summary>
-        /// Control titleEvent.
+        /// Control suggetsEventTitle.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label titleEvent;
+        protected global::System.Web.UI.WebControls.Label suggetsEventTitle;
 
         /// <summary>
-        /// Control listDayDetails.
+        /// Control labelNameEvent.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.BulletedList listDayDetails;
+        protected global::System.Web.UI.WebControls.Label labelNameEvent;
 
         /// <summary>
-        /// Control titleActivities.
+        /// Control textBoxNameEvent.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label titleActivities;
+        protected global::System.Web.UI.WebControls.TextBox textBoxNameEvent;
 
         /// <summary>
-        /// Control BulletedList1.
+        /// Control labelDateTimeEvent.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.BulletedList BulletedList1;
+        protected global::System.Web.UI.WebControls.Label labelDateTimeEvent;
 
         /// <summary>
-        /// Control titleForum.
+        /// Control textBoxDateTimeEvent.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label titleForum;
+        protected global::System.Web.UI.WebControls.TextBox textBoxDateTimeEvent;
 
         /// <summary>
-        /// Control TextBox1.
+        /// Control labelCapacityMax.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.Label labelCapacityMax;
 
         /// <summary>
-        /// Control buttonPost.
+        /// Control textBoxCapacityMax.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button buttonPost;
+        protected global::System.Web.UI.WebControls.TextBox textBoxCapacityMax;
+
+        /// <summary>
+        /// Control labelActivities.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label labelActivities;
+
+        /// <summary>
+        /// Control textBoxActivities.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox textBoxActivities;
+
+        /// <summary>
+        /// Control buttonCreateEvent.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button buttonCreateEvent;
+
+        /// <summary>
+        /// Control titleAsocia.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label titleAsocia;
+
+        /// <summary>
+        /// Control Label3.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label3;
     }
 }
