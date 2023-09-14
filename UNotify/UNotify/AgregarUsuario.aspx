@@ -88,17 +88,17 @@
 <body id="PageBody" runat="server">
     <form id="form2" runat="server">
           <asp:Panel ID="PanelSuperior" runat="server" HorizontalAlign="Left">
+               
+              &nbsp;&nbsp;&nbsp;&nbsp;
                 
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                
-                <asp:Label ID="Label3" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="UNotify" Font-Size="XX-Large"></asp:Label>
+          <asp:Label ID="Label3" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="UNotify" Font-Size="XX-Large"></asp:Label>
           </asp:Panel>
         <div class="container">
             <div class="right">
+            <div style="float: left;">
+                <asp:ImageButton ID="ImageButton1" runat="server" Height="40px" ImageUrl="img\back.png" Width="40px" OnClick="ImageButton1_Click"/>
+            </div>
             <br />
-            <br />
-
-            <asp:Label ID="Label4" runat="server" Font-Names="Segoe UI" Font-Size="XX-Large" ForeColor="White" Text="UNotify"></asp:Label>
             <br />
             <br />
   
@@ -106,22 +106,21 @@
             <br />
             <br />
     
-            <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" BorderColor="#9332C0" BorderStyle="None" Placeholder="Email" Height="50px" Width="100%" Font-Names="Segoe UI Light" Font-Size="X-Large" />
+            <asp:TextBox ID="txt_cedula" runat="server" CssClass="form-control" BorderColor="#9332C0" BorderStyle="None" Placeholder="Cédula" Height="50px" Width="100%" Font-Names="Segoe UI Light" Font-Size="X-Large" />
             <br />
     
-            <asp:TextBox ID="TextBox3" runat="server" CssClass="form-control" BorderColor="#9332C0" BorderStyle="None" Placeholder="Contraseña" Height="50px" Width="100%" Type="password" Font-Names="Segoe UI Light" Font-Size="X-Large" />
+            <asp:TextBox ID="txt_Nombre" runat="server" CssClass="form-control" BorderColor="#9332C0" BorderStyle="None" Placeholder="Nombre Completo" Height="50px" Width="100%" Type="password" Font-Names="Segoe UI Light" Font-Size="X-Large" />
             <br />
-            <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" BorderColor="#9332C0" BorderStyle="None" Placeholder="Contraseña" Height="50px" Width="100%" Type="password" Font-Names="Segoe UI Light" Font-Size="X-Large" />
+            <asp:TextBox ID="txt_email" runat="server" CssClass="form-control" BorderColor="#9332C0" BorderStyle="None" Placeholder="Email" Height="50px" Width="100%" Type="password" Font-Names="Segoe UI Light" Font-Size="X-Large" />
             <br />
-            <asp:TextBox ID="TextBox4" runat="server" CssClass="form-control" BorderColor="#9332C0" BorderStyle="None" Placeholder="Contraseña" Height="50px" Width="100%" Type="password" Font-Names="Segoe UI Light" Font-Size="X-Large" />
+            <asp:TextBox ID="txt_password1" runat="server" CssClass="form-control" BorderColor="#9332C0" BorderStyle="None" Placeholder="Contraseña" Height="50px" Width="100%" Type="password" Font-Names="Segoe UI Light" Font-Size="X-Large" />
             <br />
-            <asp:TextBox ID="TextBox5" runat="server" CssClass="form-control" BorderColor="#9332C0" BorderStyle="None" Placeholder="Contraseña" Height="50px" Width="100%" Type="password" Font-Names="Segoe UI Light" Font-Size="X-Large" />
+            <asp:TextBox ID="txt_password2" runat="server" CssClass="form-control" BorderColor="#9332C0" BorderStyle="None" Placeholder="Verificar Contraseña" Height="50px" Width="100%" Type="password" Font-Names="Segoe UI Light" Font-Size="X-Large" />
             <br />
-            <div class="button-container">
-                <asp:Button ID="Button2" runat="server" CssClass="gradient-button" BackColor="#9332C0" BorderStyle="None" Font-Names="Segoe UI Light" ForeColor="White" Text="Iniciar Sesión" Font-Size="Large" />
-                <br />
-                <asp:Button ID="Button3" runat="server" CssClass="gradient-button" BackColor="#9332C0" BorderStyle="None" Font-Names="Segoe UI Light" ForeColor="White" Text="Registrarse" Font-Size="Large" />
-            </div>
+            <asp:Label ID="lbl_error" runat="server" Font-Names="Segoe UI Light" Font-Size="Large" ForeColor="#FF6666"></asp:Label>
+            <br />
+            <asp:Button ID="btn_Registrar" runat="server" CssClass="gradient-button" BackColor="#9332C0" BorderStyle="None" Font-Names="Segoe UI Light" ForeColor="White" Text="Crear Cuenta" Font-Size="Large" OnClick="btn_Registrar_Click" />
+            
         </div>
             <div class="left">
                 <!-- Aquí puedes agregar cualquier contenido adicional si es necesario -->

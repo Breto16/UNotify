@@ -11,7 +11,7 @@ namespace UNotify
 {
     public partial class viewUser : System.Web.UI.Page
     {
-        SqlConnection con = new SqlConnection(@"Data Source=SATELLITEPROC50\SQLEXPRESS;Initial Catalog=UNotify3.2;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=BRETONDESKTOP\SQLEXPRESS;Initial Catalog=UNotify3.2;Integrated Security=True");
         protected void Page_Load(object sender, EventArgs e)
         {
             PageBody.Attributes.Add("bgcolor", "1E2126");
@@ -66,6 +66,11 @@ namespace UNotify
             {
                 con.Close();
             }
+        }
+
+        protected void buttonDelete_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

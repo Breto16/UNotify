@@ -25,7 +25,7 @@
         .labelInfo{
             color: #ffffff;
             font-size: 1.3em;
-            font-weight: 900;
+            
         }
 
         input[type="text"] {
@@ -64,6 +64,7 @@
             height: auto;
             width: 75%;
             padding: 20px;
+            align-items: center;
         }
 
         #PanelSuperior {
@@ -103,7 +104,7 @@
                 <div class="userContainer">
                     <asp:ImageMap ID="perfilImage" runat="server" Height="60px" ImageUrl="img\user.png" Width="60px">
                     </asp:ImageMap>
-                    <asp:Label ID="perfilNameTitle" CssClass="titleUser" runat="server" Text="Nombre de usuario"></asp:Label><br />
+                    <asp:Label ID="perfilNameTitle" CssClass="titleUser" runat="server" Text="Nombre de usuario" Font-Names="Segoe UI"></asp:Label><br />
 
                     <asp:Label ID="labelEmailAsociado" CssClass="labelInfo" runat="server" Text="Email asociado" Font-Names="Segoe UI" Font-Size="X-Large"></asp:Label><br />
                     <asp:TextBox ID="textBoxEmailAsociado" CssClass="textBoxInfo" runat="server" ReadOnly="true" Font-Names="Segoe UI Light" Font-Size="X-Large"></asp:TextBox><br /><br />

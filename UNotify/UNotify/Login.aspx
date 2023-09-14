@@ -20,7 +20,7 @@
 
         .left {
             flex: 2;
-            background: url('loginimg.jpg') no-repeat center center;
+            background: url('img/loginimg.jpg') no-repeat center center;
             background-size: cover;
         }
 
