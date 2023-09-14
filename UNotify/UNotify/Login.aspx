@@ -118,7 +118,7 @@
                 <div class="button-container">
                     <asp:Button ID="Button2" runat="server" CssClass="gradient-button" BackColor="#9332C0" BorderStyle="None" Font-Names="Segoe UI Light" ForeColor="White" Text="Iniciar Sesión" Font-Size="Large" />
                     <br />
-                    <asp:Button ID="Button3" runat="server" CssClass="gradient-button" BackColor="#9332C0" BorderStyle="None" Font-Names="Segoe UI Light" ForeColor="White" Text="Registrarse" Font-Size="Large" />
+                    <asp:Button ID="Button3" runat="server" CssClass="gradient-button" BackColor="#9332C0" BorderStyle="None" Font-Names="Segoe UI Light" ForeColor="White" Text="Registrarse" Font-Size="Large" OnClick="Button3_Click" />
                 </div>
             </div>
         </div>

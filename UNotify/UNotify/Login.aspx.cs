@@ -13,5 +13,10 @@ namespace UNotify
         {
             PageBody.Attributes.Add("bgcolor", "1E2126");
         }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AgregarUsuario.aspx");
+        }
     }
 }
