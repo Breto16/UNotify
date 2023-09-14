@@ -18,6 +18,8 @@ namespace UNotify
             PageBody.Attributes.Add("bgcolor", "1E2126");
         }
 
+        SqlConnection con = new SqlConnection(@"Data Source=SATELLITEPROC50\SQLEXPRESS;Initial Catalog=UNotify3.5;Integrated Security=True");
+
         protected void buttonCreateEvent_Click(object sender, EventArgs e)
         {
             string horaIngresada = textBoxTimeEvent.Text;
@@ -28,7 +30,6 @@ namespace UNotify
             // Intenta analizar la entrada como una hora en el formato especificado
             if (DateTime.TryParseExact(horaIngresada, formatoHora, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime horaValida))
             {
-                SqlConnection con = new SqlConnection(@"Data Source=SATELLITEPROC50\SQLEXPRESS;Initial Catalog=UNotify3.2;Integrated Security=True");
                 try
                 {
                     SqlCommand cmd = new SqlCommand("CrearEvento", con)
@@ -37,44 +38,38 @@ namespace UNotify
                     };
                     cmd.Connection.Open();
                     //Aqui va la parte de id del administrador
+                    cmd.Parameters.Add("@AsociacionID", SqlDbType.Int).Value = 1;
                     cmd.Parameters.Add("@Nombre", SqlDbType.NVarChar, 255).Value = textBoxNameEvent.Text;
-                    cmd.Parameters.Add("@Descripcion", SqlDbType.NVarChar).Value = textBoxDescription.Text
+                    cmd.Parameters.Add("@Descripcion", SqlDbType.NVarChar).Value = textBoxDescription.Text;
+                    cmd.Parameters.Add("@Fecha", SqlDbType.Date).Value = textBoxDateEvent.Text;
+                    cmd.Parameters.Add("@Lugar", SqlDbType.NVarChar, 255).Value = textBoxPlace.Text;
 
-                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    //Se hace en ParseInt
+                    string cadena = textBoxCapacityMax.Text;
+                    int capacidad;
+                    if(int.TryParse(cadena, out capacidad))
                     {
-                        if (reader.Read()) // Verificar si hay datos
-                        {
-                            // Obtener los valores de las columnas
-                            string EstudianteID = reader.GetString(0); // El índice 0 representa la primera columna
-                            string Nombre = reader.GetString(1); // El índice 1 representa la segunda columna
-                            string Email = reader.GetString(2); // El índice 2 representa la tercera columna
-                            bool EsColaborador = reader.GetBoolean(3); // El índice 3 representa la cuarta columna
+                        cmd.Parameters.Add("@Capacidad", SqlDbType.Int).Value = capacidad;
+                    }
+                    else
+                    {
+                        cmd.Parameters.Add("@Capacidad", SqlDbType.Int).Value = 0;
+                    }
+                    cmd.Parameters.Add("@Hora", SqlDbType.Time).Value = textBoxTimeEvent.Text;
 
-                            string EsColaboradorS;
-                            if (EsColaborador)
-                            {
-                                EsColaboradorS = "Si";
-                            }
-                            else
-                            {
-                                EsColaboradorS = "No";
-                            }
-                            // Luego, puedes usar estos valores como desees
-                            // Por ejemplo, asignarlos a controles en tu página web
-                            perfilNameTitle.Text = Nombre;
-                            textBoxEmailAsociado.Text = Email;
-                            textBoxCedulaAsociada.Text = EstudianteID;
-                            textEsColab.Text = EsColaboradorS;
-                        }
-                        else
-                        {
-                            perfilNameTitle.Text = "Error de usuario";
-                        }
+                    int filasAfectadas = cmd.ExecuteNonQuery();
+                    if(filasAfectadas > 0)
+                    {
+                        createEventTitle.Text = "Inserto";
+                    }
+                    else
+                    {
+                        createEventTitle.Text = "No Inserto";
                     }
                 }
                 catch (Exception err)
                 {
-                    perfilNameTitle.Text = err + "Ocurrió un error inesperado en la Base de Datos";
+                    createEventTitle.Text = err + "";
                 }
                 finally
                 {
