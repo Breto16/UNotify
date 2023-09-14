@@ -41,18 +41,24 @@
         }
 
         .buttonEvent{
-            border: 1px solid #9332C0;
-            border-radius: 10px;
-            display: block; 
+            display: block;
             margin: 4vh auto;
-            margin-top: 15px;
-            width: 12vw;
-            height: 7vh;
-            font-size: 90%;
-            font-weight: 900;
-            background-color: #16191C;
-            color: #fff;
+            background-image: linear-gradient(to right, #4E2386, #B82CBB);
+            color: white; /* Cambia el color del texto si es necesario */
+            text-align: center;
+            border: none;
+            padding: 10px 20px; /* Ajusta el espaciado según tus necesidades */
             cursor: pointer;
+            transition: background-color 0.3s ease; /* Efecto de transición suave */
+            height: 50px;
+            width: 48%;
+            border-radius: 3px;
+        }
+
+        buttonEvent:hover {
+            /* Cambia el color de fondo al pasar el cursor sobre los botones si es necesario */
+            background-image: none;
+            background-color: #B82CBB; /* Cambia el color de fondo en el hover */
         }
 
         .firstContainer{

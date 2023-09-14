@@ -28,15 +28,17 @@
         }
 
         .buttonPost{
-            width: 14vw;
+            background-image: linear-gradient(to right, #4E2386, #B82CBB);
+            color: white; /* Cambia el color del texto si es necesario */
+            text-align: center;
+            border: none;
+            padding: 10px 20px; /* Ajusta el espaciado según tus necesidades */
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Efecto de transición suave */
             height: 5vh;
+            width: 14vw;
+            border-radius: 3px;
             margin-left: 10vw;
-            margin-bottom: 20px;
-            border: 1px solid #9332C0;
-            border-radius: 10px;
-            margin-top: 2%;
-            background-color: #16191C;
-            color: #fff;
         }
 
         .titleActivities{
@@ -71,27 +73,33 @@
         }
 
         .buttonRemoveRegis{
-            width: 12vw;
+            background-image: linear-gradient(to right, #4E2386, #B82CBB);
+            color: white; /* Cambia el color del texto si es necesario */
+            text-align: center;
+            border: none;
+            padding: 10px 20px; /* Ajusta el espaciado según tus necesidades */
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Efecto de transición suave */
             height: 7vh;
+            width: 12vw;
             margin-left: 3vw;
             margin-bottom: 3vh;
-            border: 1px solid #9332C0;
-            background-color: #16191C;
-            color: #fff;
-            border-radius: 10px;
-            font-weight: 900;
+            border-radius: 3px;
         }
 
         .buttonSeeCodeEntry{
-            width: 12vw;
+            background-image: linear-gradient(to right, #4E2386, #B82CBB);
+            color: white; /* Cambia el color del texto si es necesario */
+            text-align: center;
+            border: none;
+            padding: 10px 20px; /* Ajusta el espaciado según tus necesidades */
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Efecto de transición suave */
             height: 7vh;
+            width: 12vw;
             margin-left: 3vw;
             margin-bottom: 3vh;
-            border: 1px solid #9332C0;
-            background-color: #16191C;
-            color: #fff;
-            border-radius: 10px;
-            font-weight: 900;
+            border-radius: 3px;
         }
 
         #containerEventDetails{
