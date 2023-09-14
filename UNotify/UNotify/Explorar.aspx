@@ -1,6 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AgregarUsuario.aspx.cs" Inherits="UNotify.AgregarUsuario" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Explorar.aspx.cs" Inherits="UNotify.Explorar" %>
 
 <!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -19,7 +20,7 @@
 
         .left {
             flex: 2;
-            background: url('img/crearuser.jpg') no-repeat center center;
+            background: url('img/loginimg.jpg') no-repeat center center;
             background-size: cover;
         }
 
@@ -50,6 +51,7 @@
             box-sizing: border-box;
             border: 3px solid transparent;
         }
+
         .form-control {
             margin-bottom: 20px;
         }
@@ -65,7 +67,6 @@
             width: 48%;
             border-radius: 3px;
         }
-
         .gradient-button:hover {
             /* Cambia el color de fondo al pasar el cursor sobre los botones si es necesario */
             background-image: none;
@@ -82,50 +83,34 @@
             background-color: #1E2126;
             height: 50px;
             justify-content: flex-start; /* Alinea los elementos a la izquierda */
+            padding: 0 10px; 
         }
     </style>
 </head>
 <body id="PageBody" runat="server">
     <form id="form2" runat="server">
-          <asp:Panel ID="PanelSuperior" runat="server" HorizontalAlign="Left">
-               
-              &nbsp;&nbsp;&nbsp;&nbsp;
-                
-          <asp:Label ID="Label3" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="UNotify" Font-Size="XX-Large"></asp:Label>
-          </asp:Panel>
+          <asp:Panel ID="PanelSuperior" runat="server">
+    <div style="display: flex; align-items: center; justify-content: flex-start; flex-grow: 1;">
+        <asp:ImageButton ID="ImageButton8" runat="server" Height="40px" Width="40px" ImageUrl="img\logout.png" />
+    </div>
+    <div style="display: flex; align-items: center; justify-content: center; margin-right: 20px;">
+        <asp:ImageButton ID="ImageButton1" runat="server" Height="40px" ImageUrl="img\white-home.png" Width="40px" style="margin-right: 20px;" />
+        <asp:ImageButton ID="ImageButton4" runat="server" Height="40px" ImageUrl="img\people.png" Width="40px" style="margin-right: 20px;"/>
+        <asp:Label ID="lbl_colabs" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Añadir Colaborador" style="margin-right: 20px;" />
+        <asp:ImageButton ID="ImageButton5" runat="server" Height="40px" ImageUrl="img\explorar.png" Width="40px" style="margin-right: 2px;" />
+        <asp:Label ID="lbl_explorar" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Explorar" style="margin-right: 20px;" />
+        <asp:ImageButton ID="ImageButton2" runat="server" Height="40px" ImageUrl="img\new-document.png" Width="40px" style="margin-right: 20px;" />
+        <asp:Label ID="lbl_sugerir" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Sugerir Evento" style="margin-right: 20px;" />
+        <asp:ImageButton ID="ImageButton6" runat="server" Height="40px" ImageUrl="img\calendar.png" Width="40px" style="margin-right: 20px;" />
+        <asp:Label ID="lbl_calendar" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Calendario" style="margin-right: 20px;" />
+    </div>
+    <div style="display: flex; align-items: center; justify-content: flex-end; flex-grow: 1;">
+        <asp:Label ID="Label1" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Nombre de Usuario" style="margin-right: 20px;" />
+        <asp:ImageButton ID="ImageButton7" runat="server" Height="40px" ImageUrl="img\user.png" Width="40px" />
+    </div>
+</asp:Panel>
+
         <div class="container">
-            <div class="right">
-            <div style="float: left;">
-                <asp:ImageButton ID="ImageButton1" runat="server" Height="40px" ImageUrl="img\back.png" Width="40px" OnClick="ImageButton1_Click"/>
-            </div>
-            <br />
-            <br />
-            <br />
-  
-            <asp:Label ID="Label5" runat="server" Font-Names="Segoe UI" Font-Size="XX-Large" ForeColor="White" Text="Cree una Cuenta"></asp:Label>
-            <br />
-            <br />
-    
-            <asp:TextBox ID="txt_cedula" runat="server" CssClass="form-control" BorderColor="#9332C0" BorderStyle="None" Placeholder="Cédula" Height="50px" Width="100%" Font-Names="Segoe UI Light" Font-Size="X-Large" />
-            <br />
-    
-            <asp:TextBox ID="txt_Nombre" runat="server" CssClass="form-control" BorderColor="#9332C0" BorderStyle="None" Placeholder="Nombre Completo" Height="50px" Width="100%" Type="text" Font-Names="Segoe UI Light" Font-Size="X-Large" />
-            <br />
-            <asp:TextBox ID="txt_email" runat="server" CssClass="form-control" BorderColor="#9332C0" BorderStyle="None" Placeholder="Email" Height="50px" Width="100%" Type="text" Font-Names="Segoe UI Light" Font-Size="X-Large" />
-            <br />
-            <asp:TextBox ID="txt_password1" runat="server" CssClass="form-control" BorderColor="#9332C0" BorderStyle="None" Placeholder="Contraseña" Height="50px" Width="100%" Type="password" Font-Names="Segoe UI Light" Font-Size="X-Large" />
-            <br />
-            <asp:TextBox ID="txt_password2" runat="server" CssClass="form-control" BorderColor="#9332C0" BorderStyle="None" Placeholder="Verificar Contraseña" Height="50px" Width="100%" Type="password" Font-Names="Segoe UI Light" Font-Size="X-Large" />
-            <br />
-            <asp:Label ID="lbl_error" runat="server" Font-Names="Segoe UI Light" Font-Size="Large" ForeColor="#FF6666"></asp:Label>
-            <br />
-            <br />
-            <asp:Button ID="btn_Registrar" runat="server" CssClass="gradient-button" BackColor="#9332C0" BorderStyle="None" Font-Names="Segoe UI Light" ForeColor="White" Text="Crear Cuenta" Font-Size="Large" OnClick="btn_Registrar_Click" />
-            
-        </div>
-            <div class="left">
-                <!-- Aquí puedes agregar cualquier contenido adicional si es necesario -->
-            </div>
             
         </div>
     </form>

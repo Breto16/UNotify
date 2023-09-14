@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AgregarUsuario.aspx" />
+    <Content Include="Explorar.aspx" />
     <Content Include="index.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="viewCreateEvent.aspx" />
@@ -83,6 +84,13 @@
     </Compile>
     <Compile Include="AgregarUsuario.aspx.designer.cs">
       <DependentUpon>AgregarUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Explorar.aspx.cs">
+      <DependentUpon>Explorar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Explorar.aspx.designer.cs">
+      <DependentUpon>Explorar.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
