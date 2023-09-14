@@ -92,6 +92,7 @@
             padding: 20px;
             text-align: center;
         }
+
         #PanelSuperior {
             display: flex;
             align-items: center; /* Centra verticalmente el contenido */

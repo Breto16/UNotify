@@ -20,16 +20,29 @@
             color: #fff;
         }
 
-        .textBoxEvent{
-            border: 2px solid #9332C0;
-            border-radius: 10px;
-            padding: 5px;
+        input[type="text"] {
+            background-color: #1E2126; /* Tonalidad gris */
+            color: white; /* Color de fuente blanco */
+            border: none; /* Sin borde */
+            padding: 8px; /* Ajusta el espaciado según tus necesidades */
+            border-radius: 5px; /* Borde redondeado de 5 píxeles */
+            box-sizing: border-box;
+            border: 3px solid transparent;
             width: 30vw;
-            height: 5vh;
-            background-color:#16191C;
-            color: #ffffff;
+            height: 8vh;
+        }
+
+        .textBoxEventMulti{
             resize: none;
-            overflow-block: auto;
+            background-color: #1E2126; /* Tonalidad gris */
+            color: white; /* Color de fuente blanco */
+            border: none; /* Sin borde */
+            padding: 8px; /* Ajusta el espaciado según tus necesidades */
+            border-radius: 5px; /* Borde redondeado de 5 píxeles */
+            box-sizing: border-box;
+            border: 3px solid transparent;
+            width: 30vw;
+            height: 15vh;
         }
 
         .labelEventForm{
@@ -61,21 +74,23 @@
             background-color: #B82CBB; /* Cambia el color de fondo en el hover */
         }
 
-        .firstContainer{
-            display:flex;
-            align-items: center;
+        .container{
+            display: flex;
+            height: auto;
+            margin-left: 0px;
+            padding-left: 15px;
         }
 
         #containerDataEvent{
-            display: inline-block;
-            width: 50%;
-            height: 100%;
+            flex: 1;
         }
 
         #containerColabs{
-             display: inline-block;
-             width: 50%;
-             height: 70%;
+             flex: 2;
+            background-color: #16191C;
+            color: white;
+            padding: 20px;
+            text-align: center;
         }
 
         #PanelSuperior {
@@ -112,33 +127,33 @@
                 </div>
             </asp:Panel>
             <asp:Panel ID="Panel1" runat="server" BackColor="#16191C" CssClass="firstContainer" Style="padding-left: 15px; height: auto;">
-                <div style="display: flex; justify-content: space-between;">
+                <div class="container">
                     <div id="containerDataEvent">
-                        <asp:Label ID="createEventTitle" runat="server" Text="Crear nuevo evento" Font-Bold="True" CssClass="titleCenter"></asp:Label><br />
+                        <asp:Label ID="createEventTitle" runat="server" Text="Crear nuevo evento" Font-Bold="True" CssClass="titleCenter" Font-Names="Segoe UI" Font-Size="XX-Large"></asp:Label><br />
 
-                        <asp:Label ID="labelNameEvent" CssClass="labelEventForm" runat="server" Text="Ingresa el nombre del evento"></asp:Label><br />
-                        <asp:TextBox ID="textBoxNameEvent" CssClass="textBoxEvent" runat="server" Placeholder="Puede contener hasta 90 carácteres"></asp:TextBox><br />
+                        <asp:Label ID="labelNameEvent" CssClass="labelEventForm" runat="server" Text="Ingresa el nombre del evento" Font-Names="Segoe UI" Font-Size="X-Large"></asp:Label><br />
+                        <asp:TextBox ID="textBoxNameEvent" CssClass="textBoxEvent" runat="server" Placeholder="Puede contener hasta 90 carácteres" Font-Names="Segoe UI Light" Font-Size="X-Large"></asp:TextBox><br />
 
-                        <asp:Label ID="labelDescription" CssClass="labelEventForm" runat="server" Text="Agrega la descripción del evento"></asp:Label><br />
-                        <asp:TextBox ID="textBoxDescription" CssClass="textBoxEvent" runat="server" Placeholder="Sea descriptivo (No superé los 100 carácteres)" TextMode="MultiLine"></asp:TextBox>
+                        <asp:Label ID="labelDescription" CssClass="labelEventForm" runat="server" Text="Agrega la descripción del evento" Font-Names="Segoe UI" Font-Size="X-Large"></asp:Label><br />
+                        <asp:TextBox ID="textBoxDescription" CssClass="textBoxEventMulti" runat="server" Placeholder="Sea descriptivo (No superé los 100 carácteres)" TextMode="MultiLine" Font-Names="Segoe UI Light" Font-Size="X-Large"></asp:TextBox>
 
                         <asp:Label ID="labelDateTimeEvent" CssClass="labelEventForm" runat="server" Text="I">Ingresa el dia y la hora (inicio-fin) del evento</asp:Label><br />
-                        <asp:TextBox ID="textBoxDateTimeEvent" CssClass="textBoxEvent" runat="server" Placeholder="Debe ser en el formato DD/MM/AAAA XX-XX:XX"></asp:TextBox><br />
+                        <asp:TextBox ID="textBoxDateTimeEvent" CssClass="textBoxEvent" runat="server" Placeholder="Debe ser en el formato DD/MM/AAAA XX-XX:XX" Font-Names="Segoe UI Light" Font-Size="X-Large"></asp:TextBox><br />
 
-                        <asp:Label ID="labelCapacityMax" CssClass="labelEventForm" runat="server" Text="Ingresa la capacidad máxima de personas del evento"></asp:Label><br />
-                        <asp:TextBox ID="textBoxCapacityMax" CssClass="textBoxEvent" runat="server" Placeholder="Debe ser número entero"></asp:TextBox><br />
+                        <asp:Label ID="labelCapacityMax" CssClass="labelEventForm" runat="server" Text="Ingresa la capacidad máxima de personas del evento" Font-Names="Segoe UI" Font-Size="X-Large"></asp:Label><br />
+                        <asp:TextBox ID="textBoxCapacityMax" CssClass="textBoxEvent" runat="server" Placeholder="Debe ser número entero" Font-Names="Segoe UI Light" Font-Size="X-Large"></asp:TextBox><br />
 
-                        <asp:Label ID="labelActivities" CssClass="labelEventForm" runat="server" Text="Agrega las actividades que se harán en el evento"></asp:Label><br />
-                        <asp:TextBox ID="textBoxActivities" CssClass="textBoxEvent" runat="server" Placeholder="Utiliza preferiblemente viñetas" TextMode="MultiLine"></asp:TextBox>
+                        <asp:Label ID="labelActivities" CssClass="labelEventForm" runat="server" Text="Agrega las actividades que se harán en el evento" Font-Names="Segoe UI" Font-Size="X-Large"></asp:Label><br />
+                        <asp:TextBox ID="textBoxActivities" CssClass="textBoxEventMulti" runat="server" Placeholder="Utiliza preferiblemente viñetas" TextMode="MultiLine" Font-Names="Segoe UI Light" Font-Size="X-Large"></asp:TextBox>
 
-                        <asp:Label ID="labelPlace" CssClass="labelEventForm" runat="server" Text="Ingresa el lugar donde se va a realizar el evento"></asp:Label><br />
-                        <asp:TextBox ID="textBoxPlace" CssClass="textBoxEvent" runat="server" Placeholder="Sea muy descriptivo del lugar (No superé los 100 carácteres)" TextMode="MultiLine"></asp:TextBox>
+                        <asp:Label ID="labelPlace" CssClass="labelEventForm" runat="server" Text="Ingresa el lugar donde se va a realizar el evento" Font-Names="Segoe UI" Font-Size="X-Large"></asp:Label><br />
+                        <asp:TextBox ID="textBoxPlace" CssClass="textBoxEventMulti" runat="server" Placeholder="Sea muy descriptivo del lugar (No superé los 100 carácteres)" TextMode="MultiLine" Font-Names="Segoe UI Light" Font-Size="X-Large"></asp:TextBox>
 
                         <asp:Button ID="buttonCreateEvent" runat="server" Text="Crear Evento" CssClass="buttonEvent"/>
                     </div>
                     <div id="containerColabs">
-                        <asp:Label ID="titleColabs" runat="server" Text="Agregar colaboradores" Font-Bold="True" CssClass="titleCenter"></asp:Label><br />
-                        <asp:Label ID="Label3" runat="server" Text="* Username colaborador"></asp:Label>
+                        <asp:Label ID="titleColabs" runat="server" Text="Agregar colaboradores" Font-Bold="True" CssClass="titleCenter" Font-Names="Segoe UI" Font-Size="XX-Large"></asp:Label><br />
+                        <asp:Label ID="Label3" runat="server" Text="* Username colaborador" Font-Names="Segoe UI" Font-Size="X-Large"></asp:Label>
                     </div>
                 </div>
             </asp:Panel>
