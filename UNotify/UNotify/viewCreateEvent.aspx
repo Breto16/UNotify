@@ -56,6 +56,18 @@
             height: 8vh;
         }
 
+        #uploadImage{
+            background-color: #16191C; /* Tonalidad gris */
+            color: white; /* Color de fuente blanco */
+            border: none; /* Sin borde */
+            padding: 8px; /* Ajusta el espaciado según tus necesidades */
+            border-radius: 5px; /* Borde redondeado de 5 píxeles */
+            box-sizing: border-box;
+            border: 3px solid transparent;
+            width: 40vw;
+            height: 8vh;
+        }
+
         .textBoxEventMulti{
             resize: none;
             background-color: #1E2126; /* Tonalidad gris */
@@ -166,10 +178,10 @@
                         <asp:Label ID="labelDescription" CssClass="labelEventForm" runat="server" Text="Agrega la descripción del evento" Font-Names="Segoe UI" Font-Size="X-Large"></asp:Label><br />
                         <asp:TextBox ID="textBoxDescription" CssClass="textBoxEventMulti" runat="server" Placeholder="Sea descriptivo (No superé los 100 carácteres)" TextMode="MultiLine" Font-Names="Segoe UI Light" Font-Size="X-Large"></asp:TextBox>
 
-                        <asp:Label ID="labelDateEvent" CssClass="labelEventForm" runat="server" Text="Ingresa el dia de inicio del evento"></asp:Label><br />
+                        <asp:Label ID="labelDateEvent" CssClass="labelEventForm" runat="server" Text="Ingresa el dia de inicio del evento" Font-Names="Segoe UI" Font-Size="X-Large"></asp:Label><br />
                         <asp:TextBox ID="textBoxDateEvent" type="date" CssClass="textBoxEvent" runat="server" Placeholder="Debe ser en el formato DD/MM/AAAA" Font-Names="Segoe UI Light" Font-Size="X-Large"></asp:TextBox><br />
                         
-                        <asp:Label ID="labelTimeEvent" CssClass="labelEventForm" runat="server" Text="Ingresa la hora de inicio del evento"></asp:Label>
+                        <asp:Label ID="labelTimeEvent" CssClass="labelEventForm" runat="server" Text="Ingresa la hora de inicio del evento" Font-Names="Segoe UI" Font-Size="X-Large"></asp:Label>
                         <asp:TextBox ID="textBoxTimeEvent" CssClass="textBoxEvent" runat="server" Placeholder="Debe ser en el formato HH-MM-SS" Font-Names="Segoe UI Light" Font-Size="X-Large"></asp:TextBox>
 
                     </div>
@@ -182,6 +194,8 @@
 
                         <asp:Label ID="labelPlace" CssClass="labelEventForm" runat="server" Text="Ingresa el lugar donde se va a realizar el evento" Font-Names="Segoe UI" Font-Size="X-Large"></asp:Label><br />
                         <asp:TextBox ID="textBoxPlace" CssClass="textBoxEventMulti" runat="server" Placeholder="Sea muy descriptivo del lugar (No superé los 100 carácteres)" TextMode="MultiLine" Font-Names="Segoe UI Light" Font-Size="X-Large"></asp:TextBox>
+
+                        <asp:FileUpload ID="uploadImage" runat="server" Font-Names="Segoe UI" Font-Size="X-Large" />
                     
                     </div>
                 </div>

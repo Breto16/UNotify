@@ -8,6 +8,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.IO;
 
 namespace UNotify
 {
@@ -18,67 +19,103 @@ namespace UNotify
             PageBody.Attributes.Add("bgcolor", "1E2126");
         }
 
+<<<<<<< HEAD
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-38G492P;Initial Catalog=UNotify3.3;Integrated Security=True");
+=======
+        SqlConnection con = new SqlConnection(@"Data Source=SATELLITEPROC50\SQLEXPRESS;Initial Catalog=UNotify3.7;Integrated Security=True");
+
+>>>>>>> 90a22a15e3681d1033c1c47f709ca52281a12bd0
         protected void buttonCreateEvent_Click(object sender, EventArgs e)
         {
-            string horaIngresada = textBoxTimeEvent.Text;
-
-            // Formato esperado de hora (HH:mm)
-            string formatoHora = "HH:mm";
-
-            // Intenta analizar la entrada como una hora en el formato especificado
-            if (DateTime.TryParseExact(horaIngresada, formatoHora, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime horaValida))
+            //Guardar la imagen en la ruta y obtener le nombre de la imagen para la base de datos
+            if (uploadImage.HasFile)
             {
                 try
                 {
-                    SqlCommand cmd = new SqlCommand("CrearEvento", con)
-                    {
-                        CommandType = CommandType.StoredProcedure
-                    };
-                    cmd.Connection.Open();
-                    //Aqui va la parte de id del administrador
-                    cmd.Parameters.Add("@AsociacionID", SqlDbType.Int).Value = 1;
-                    cmd.Parameters.Add("@Nombre", SqlDbType.NVarChar, 255).Value = textBoxNameEvent.Text;
-                    cmd.Parameters.Add("@Descripcion", SqlDbType.NVarChar).Value = textBoxDescription.Text;
-                    cmd.Parameters.Add("@Fecha", SqlDbType.Date).Value = textBoxDateEvent.Text;
-                    cmd.Parameters.Add("@Lugar", SqlDbType.NVarChar, 255).Value = textBoxPlace.Text;
+                    string nombreArchivo = Path.GetFileName(uploadImage.FileName);
+                    string rutaGuardar = Server.MapPath("~/img/") + nombreArchivo;
 
-                    //Se hace en ParseInt
-                    string cadena = textBoxCapacityMax.Text;
-                    int capacidad;
-                    if(int.TryParse(cadena, out capacidad))
+                    if(File.Exists(rutaGuardar))
                     {
-                        cmd.Parameters.Add("@Capacidad", SqlDbType.Int).Value = capacidad;
+                        //Ya existe el archivo
+                        createEventTitle.Text = "Ya existe";
                     }
                     else
                     {
-                        cmd.Parameters.Add("@Capacidad", SqlDbType.Int).Value = 0;
-                    }
-                    cmd.Parameters.Add("@Hora", SqlDbType.Time).Value = textBoxTimeEvent.Text;
+                        uploadImage.SaveAs(rutaGuardar);
 
-                    int filasAfectadas = cmd.ExecuteNonQuery();
-                    if(filasAfectadas > 0)
-                    {
-                        createEventTitle.Text = "Inserto";
-                    }
-                    else
-                    {
-                        createEventTitle.Text = "No Inserto";
+                        //Apartir de aqui empieza la ejecución del storedProcedure
+                        string horaIngresada = textBoxTimeEvent.Text;
+                        // Formato esperado de hora (HH:mm)
+                        string formatoHora = "HH:mm";
+                        if (DateTime.TryParseExact(horaIngresada, formatoHora, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime horaValida))
+                        {
+                            try
+                            {
+                                SqlCommand cmd = new SqlCommand("CrearEvento", con)
+                                {
+                                    CommandType = CommandType.StoredProcedure
+                                };
+                                cmd.Connection.Open();
+                                //Aqui va la parte de id del administrador
+                                cmd.Parameters.Add("@AsociacionID", SqlDbType.Int).Value = 1;
+                                cmd.Parameters.Add("@Nombre", SqlDbType.NVarChar, 255).Value = textBoxNameEvent.Text;
+                                cmd.Parameters.Add("@Descripcion", SqlDbType.NVarChar).Value = textBoxDescription.Text;
+                                cmd.Parameters.Add("@Fecha", SqlDbType.Date).Value = textBoxDateEvent.Text;
+                                cmd.Parameters.Add("@Hora", SqlDbType.Time).Value = textBoxTimeEvent.Text;
+                                cmd.Parameters.Add("@Lugar", SqlDbType.NVarChar, 255).Value = textBoxPlace.Text;
+
+                                //Se hace en ParseInt
+                                string cadena = textBoxCapacityMax.Text;
+                                int capacidad;
+                                if (int.TryParse(cadena, out capacidad))
+                                {
+                                    cmd.Parameters.Add("@Capacidad", SqlDbType.Int).Value = capacidad;
+                                }
+                                else
+                                {
+                                    cmd.Parameters.Add("@Capacidad", SqlDbType.Int).Value = 0;
+                                }
+
+                                cmd.Parameters.Add("@NombreImagen", SqlDbType.NVarChar).Value = nombreArchivo;
+
+                                int filasAfectadas = cmd.ExecuteNonQuery();
+                                if (filasAfectadas > 0)
+                                {
+                                    createEventTitle.Text = nombreArchivo;
+                                }
+                                else
+                                {
+                                    createEventTitle.Text = "No Inserto";
+                                }
+                            }
+                            catch (Exception err)
+                            {
+                                createEventTitle.Text = err + "";
+                            }
+                            finally
+                            {
+                                con.Close();
+                            }
+                        }
+                        else
+                        {
+                            // La entrada no es una hora válida, muestra un mensaje de error
+                            createEventTitle.Text = "No Sirve validar";
+                        }
                     }
                 }
-                catch (Exception err)
+                catch(Exception ex)
                 {
-                    createEventTitle.Text = err + "";
-                }
-                finally
-                {
-                    con.Close();
+                    //Maneja error en la carga del archivo
+                    createEventTitle.Text = ex + "";
+
                 }
             }
             else
             {
-                // La entrada no es una hora válida, muestra un mensaje de error
-                createEventTitle.Text = "No Sirve validar";
+                //No se carga imagen
+                createEventTitle.Text = "No se cargo imagen";
             }
         }
     }
