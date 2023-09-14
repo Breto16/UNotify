@@ -18,8 +18,7 @@ namespace UNotify
             PageBody.Attributes.Add("bgcolor", "1E2126");
         }
 
-        SqlConnection con = new SqlConnection(@"Data Source=SATELLITEPROC50\SQLEXPRESS;Initial Catalog=UNotify3.5;Integrated Security=True");
-
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-38G492P;Initial Catalog=UNotify3.3;Integrated Security=True");
         protected void buttonCreateEvent_Click(object sender, EventArgs e)
         {
             string horaIngresada = textBoxTimeEvent.Text;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -15,6 +16,17 @@ namespace UNotify
             lbl_calendar.Visible = false;
             lbl_colabs.Visible = false;
             lbl_sugerir.Visible = false;
+
+            //Para el event repeater
         }
+
+    }
+
+    private DataTable ObtenerEventos()
+    {
+        //Implementar la llamada al store procedure
+        //Retornarlo como DataTable
+        DataTable eventData = new DataTable();
+
     }
 }
