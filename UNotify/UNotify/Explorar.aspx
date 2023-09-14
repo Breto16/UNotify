@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Explorar.aspx.cs" Inherits="UNotify.Explorar" %>
+﻿<%@ Page Language="C#" EnableEventValidation="true" AutoEventWireup="true" CodeBehind="Explorar.aspx.cs" Inherits="UNotify.Explorar" %>
 
 <!DOCTYPE html>
 
@@ -118,6 +118,7 @@
 </asp:Panel>
 
         <div class="container">
+            <asp:Label ID="pruebaCommand" runat="server" Text="Label"></asp:Label>
             <asp:Repeater ID="eventRepeater" runat="server">
                 <ItemTemplate>
                     <div class="event">
@@ -128,7 +129,7 @@
                         <p>Hora: <%# Eval("Hora") %></p>
                         <p>Lugar: <%# Eval("Lugar") %></p>
                         <p>Capacidad máxima: <%# Eval("Capacidad") %></p>  
-                        <p></p>
+                        <asp:Button ID="btnEjemplo" CssClass="gradient-button" runat="server" Text="Botón de Ejemplo" CommandArgument='<%# Eval("EventoID") %>' OnClick="btnEjemplo_Click" />
                     </div>
                 </ItemTemplate>
             </asp:Repeater>

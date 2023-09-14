@@ -50,5 +50,13 @@ namespace UNotify
 
         }
 
+        protected void btnEjemplo_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender; // Convierte el sender a un control Button
+            string datoComoCadena = btn.CommandArgument;
+
+            pruebaCommand.Text = datoComoCadena;
+        }
+
     }
 }
