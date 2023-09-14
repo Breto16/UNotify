@@ -15,7 +15,7 @@ namespace UNotify
         {
             PageBody.Attributes.Add("bgcolor", "1E2126");
             lbl_calendar.Visible = false;
-            lbl_colabs.Visible = false;
+            
             lbl_sugerir.Visible = false;
 
             DataTable eventData = ObtenerEventos();
@@ -26,7 +26,7 @@ namespace UNotify
 
         }
 
-        SqlConnection con = new SqlConnection("Data Source=SATELLITEPROC50\\SQLEXPRESS;Initial Catalog=UNotify3.9;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=BRETONDESKTOP\\SQLEXPRESS;Initial Catalog=UNotify3.9;Integrated Security=True");
         private DataTable ObtenerEventos()
         {
 
@@ -58,5 +58,14 @@ namespace UNotify
             pruebaCommand.Text = datoComoCadena;
         }
 
+        protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("viewSuggestEvent.aspx");
+        }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("index.aspx");
+        }
     }
 }

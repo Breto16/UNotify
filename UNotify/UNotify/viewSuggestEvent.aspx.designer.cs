@@ -60,24 +60,6 @@ namespace UNotify
         protected global::System.Web.UI.WebControls.ImageButton btn_home;
 
         /// <summary>
-        /// Control btn_colabs.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton btn_colabs;
-
-        /// <summary>
-        /// Control lbl_colabs.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_colabs;
-
-        /// <summary>
         /// Control btn_Explorar.
         /// </summary>
         /// <remarks>
@@ -85,15 +67,6 @@ namespace UNotify
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton btn_Explorar;
-
-        /// <summary>
-        /// Control lbl_explorar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_explorar;
 
         /// <summary>
         /// Control btn_Sugerir.
@@ -121,15 +94,6 @@ namespace UNotify
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton btn_calendar;
-
-        /// <summary>
-        /// Control lbl_calendar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_calendar;
 
         /// <summary>
         /// Control lbl_user.

@@ -67,9 +67,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AgregarColaboradorAsocia.aspx" />
     <Content Include="AgregarUsuario.aspx" />
     <Content Include="Explorar.aspx" />
     <Content Include="index.aspx" />
+    <Content Include="indexAdmins.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="viewCreateEvent.aspx" />
     <Content Include="viewEventDetailsUser.aspx" />
@@ -78,6 +80,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarColaboradorAsocia.aspx.cs">
+      <DependentUpon>AgregarColaboradorAsocia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarColaboradorAsocia.aspx.designer.cs">
+      <DependentUpon>AgregarColaboradorAsocia.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AgregarUsuario.aspx.cs">
       <DependentUpon>AgregarUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -98,6 +107,13 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="indexAdmins.aspx.cs">
+      <DependentUpon>indexAdmins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="indexAdmins.aspx.designer.cs">
+      <DependentUpon>indexAdmins.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

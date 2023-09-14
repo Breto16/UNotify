@@ -112,15 +112,11 @@
                     <asp:ImageButton ID="btn_logout" runat="server" Height="40px" Width="40px" ImageUrl="img\logout.png" />
                 </div>
                 <div style="display: flex; align-items: center; justify-content: center; margin-right: 20px;">
-                    <asp:ImageButton ID="btn_home" runat="server" Height="40px" ImageUrl="img\white-home.png" Width="40px" style="margin-right: 20px;" />
-                    <asp:ImageButton ID="btn_colabs" runat="server" Height="40px" ImageUrl="img\people.png" Width="40px" style="margin-right: 20px;"/>
-                    <asp:Label ID="lbl_colabs" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Añadir Colaborador" style="margin-right: 20px;" />
-                    <asp:ImageButton ID="btn_Explorar" runat="server" Height="40px" ImageUrl="img\explorar.png" Width="40px" style="margin-right: 20px;" />
-                    <asp:Label ID="lbl_explorar" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Explorar" style="margin-right: 20px;" />
+                    <asp:ImageButton ID="btn_home" runat="server" Height="40px" ImageUrl="img\white-home.png" Width="40px" style="margin-right: 20px;" OnClick="btn_home_Click" />
+                    <asp:ImageButton ID="btn_Explorar" runat="server" Height="40px" ImageUrl="img\explorar.png" Width="40px" style="margin-right: 20px;" OnClick="btn_Explorar_Click" />
                     <asp:ImageButton ID="btn_Sugerir" runat="server" Height="40px" ImageUrl="img\new-document.png" Width="40px" style="margin-right: 20px;" />
                     <asp:Label ID="lbl_sugerir" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Sugerir Evento" style="margin-right: 20px;" />
                     <asp:ImageButton ID="btn_calendar" runat="server" Height="40px" ImageUrl="img\calendar.png" Width="40px" style="margin-right: 20px;" />
-                    <asp:Label ID="lbl_calendar" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Calendario" style="margin-right: 20px;" />
                 </div>
                 <div style="display: flex; align-items: center; justify-content: flex-end; flex-grow: 1;">
                     <asp:Label ID="lbl_user" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Nombre de Usuario" style="margin-right: 20px;" />

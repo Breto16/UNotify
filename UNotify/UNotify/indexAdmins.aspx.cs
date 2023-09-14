@@ -9,18 +9,18 @@ using System.Web.UI.WebControls;
 
 namespace UNotify
 {
-    
-    public partial class index : System.Web.UI.Page
+    public partial class indexAdmins : System.Web.UI.Page
     {
-        SqlConnection con = new SqlConnection(@"Data Source=BRETONDESKTOP\SQLEXPRESS;Initial Catalog=UNotify3.7;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=BRETONDESKTOP\SQLEXPRESS;Initial Catalog=UNotify3.9;Integrated Security=True");
         int userId;
         protected void Page_Load(object sender, EventArgs e)
         {
             PageBody.Attributes.Add("bgcolor", "1E2126");
             
-            lbl_explorar.Visible = false;
+
+            lbl_colabs.Visible = false;
             lbl_sugerir.Visible = false;
-            lbl_calendar.Visible = false;
+            
 
             if (!string.IsNullOrEmpty(Request.QueryString["cuentaID"]))
             {
@@ -66,29 +66,24 @@ namespace UNotify
             }
         }
 
-        protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
-        {
-            Response.Redirect("viewCrearEvento.aspx");
-        }
-
         protected void ImageButton8_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("Login.aspx");
+            Response.Redirect("login.aspx");
         }
 
         protected void ImageButton7_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("viewUser.aspx?cuentaID=" + userId);
+
         }
 
-        protected void ImageButton5_Click(object sender, ImageClickEventArgs e)
+        protected void ImageButton4_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("Explorar.aspx");
+            Response.Redirect("AgregarColaboradorAsocia.aspx");
         }
 
-        protected void ImageButton2_Click1(object sender, ImageClickEventArgs e)
+        protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("viewSuggestEvent.aspx");
+            Response.Redirect("viewCreateEvent.aspx");
         }
     }
 }

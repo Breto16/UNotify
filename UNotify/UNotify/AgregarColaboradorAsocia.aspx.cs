@@ -10,21 +10,22 @@ using System.Web.UI.WebControls;
 
 namespace UNotify
 {
-    public partial class AgregarUsuario : System.Web.UI.Page
+    public partial class AgregarColaboradorAsocia : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             PageBody.Attributes.Add("bgcolor", "1E2126");
         }
         SqlConnection con = new SqlConnection(@"Data Source=BRETONDESKTOP\SQLEXPRESS;Initial Catalog=UNotify3.9;Integrated Security=True");
+
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
-            Response.Redirect("Login.aspx");
+            Response.Redirect("indexAdmins.aspx");
         }
 
         protected void btn_Registrar_Click(object sender, EventArgs e)
         {
-            if (txt_cedula.Text == "" || txt_Nombre.Text == "" || txt_email.Text == "" || txt_password1.Text == "" || txt_password2.Text == "")
+            if (txt_Nombre.Text == "" || txt_email.Text == "" || txt_password1.Text == "" || txt_password2.Text == "")
                 lbl_error.Text = "¡Uno o más campos están vacíos!";
             else
             {
@@ -32,7 +33,7 @@ namespace UNotify
                 {
                     try
                     {
-                        SqlCommand cmd = new SqlCommand("CrearCuentaUsuario", con)
+                        SqlCommand cmd = new SqlCommand("CrearCuentaAdmin", con)
                         {
                             CommandType = CommandType.StoredProcedure
                         };
@@ -41,13 +42,11 @@ namespace UNotify
                         cmd.Parameters.Add("@Nombre", SqlDbType.NVarChar, 255).Value = txt_Nombre.Text;
                         cmd.Parameters.Add("@Email", SqlDbType.NVarChar, 255).Value = txt_email.Text;
                         cmd.Parameters.Add("@Password", SqlDbType.NVarChar, 255).Value = txt_password1.Text;
-                        cmd.Parameters.Add("@Cedula", SqlDbType.NVarChar, 255).Value = txt_cedula.Text;
-                        cmd.Parameters.Add("@EsColaborador", SqlDbType.Bit).Value = 0;
-    
+
                         int filasAfectadas = cmd.ExecuteNonQuery();
                         if (filasAfectadas > 0)
                         {
-                            
+
                             lbl_error.Text = "¡Insercion Exitosa! Volviendo al Login...";
                             Thread.Sleep(2000);
                         }
@@ -55,10 +54,10 @@ namespace UNotify
                         {
                             lbl_error.Text = "Usuario Inválido | Ya Existe ";
                         }
-                        if(lbl_error.Text== "¡Insercion Exitosa! Volviendo al Login...")
+                        if (lbl_error.Text == "¡Insercion Exitosa! Volviendo al Login...")
                         {
                             Thread.Sleep(2000);
-                            Response.Redirect("Login.aspx");
+                            Response.Redirect("indexAdmins.aspx");
                         }
                     }
                     catch (Exception err)

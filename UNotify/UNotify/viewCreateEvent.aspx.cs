@@ -18,7 +18,7 @@ namespace UNotify
         {
             PageBody.Attributes.Add("bgcolor", "1E2126");
         }
-        SqlConnection con = new SqlConnection(@"Data Source=SATELLITEPROC50\SQLEXPRESS;Initial Catalog=UNotify3.9;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=BRETONDESKTOP\\SQLEXPRESS;Initial Catalog=UNotify3.9;Integrated Security=True");
 
         protected void buttonCreateEvent_Click(object sender, EventArgs e)
         {
@@ -112,6 +112,21 @@ namespace UNotify
                 //No se carga imagen
                 createEventTitle.Text = "No se cargo imagen";
             }
+        }
+
+        protected void ImageButton5_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("Explorar.aspx");
+        }
+
+        protected void ImageButton4_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("AgregarColaboradorAsocia.aspx");
+        }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("indexAdmins.aspx");
         }
     }
 }

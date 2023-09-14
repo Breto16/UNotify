@@ -17,7 +17,7 @@ namespace UNotify
         {
             PageBody.Attributes.Add("bgcolor", "1E2126");
         }
-        SqlConnection con = new SqlConnection(@"Data Source=BRETONDESKTOP\SQLEXPRESS;Initial Catalog=UNotify3.7;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=BRETONDESKTOP\SQLEXPRESS;Initial Catalog=UNotify3.9;Integrated Security=True");
 
         protected void Button3_Click(object sender, EventArgs e)
         {
@@ -54,10 +54,10 @@ namespace UNotify
                     if (cuentaID != 0)
                     {
 
-                        if (esAsociacion)
+                        if (esAsociacion == true)
                         {
                             //Admin
-                            Response.Redirect("index.aspx?cuentaID=" + cuentaID);
+                            Response.Redirect("indexAdmins.aspx?cuentaID=" + cuentaID);
                         }
                         else
                         {
@@ -74,7 +74,7 @@ namespace UNotify
                 }
                 catch (Exception err)
                 {
-                    lbl_error.Text = "Usuario Inválido | Combinacion Email/Password Incorrecta";
+                    lbl_error.Text = "SPUsuario Inválido | Combinacion Email/Password Incorrecta";
                 }
                 finally
                 {

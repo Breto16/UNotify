@@ -14,5 +14,20 @@ namespace UNotify
             PageBody.Attributes.Add("bgcolor", "1E2126");
 
         }
+
+        protected void btn_Sugerir_Click(object sender, ImageClickEventArgs e)
+        {
+
+        }
+
+        protected void btn_Explorar_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("Explorar.aspx");
+        }
+
+        protected void btn_home_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("index.aspx");
+        }
     }
 }
