@@ -28,9 +28,9 @@
         }
 
         .buttonPost{
-            width: 13vw;
+            width: 14vw;
             height: 5vh;
-            margin-left: 10px;
+            margin-left: 10vw;
             margin-bottom: 20px;
             border: 1px solid #9332C0;
             border-radius: 10px;
@@ -68,6 +68,30 @@
             font-size: 1.3em;
             font-weight: 900;
             margin: 10px 0;
+        }
+
+        .buttonRemoveRegis{
+            width: 12vw;
+            height: 7vh;
+            margin-left: 3vw;
+            margin-bottom: 3vh;
+            border: 1px solid #9332C0;
+            background-color: #16191C;
+            color: #fff;
+            border-radius: 10px;
+            font-weight: 900;
+        }
+
+        .buttonSeeCodeEntry{
+            width: 12vw;
+            height: 7vh;
+            margin-left: 3vw;
+            margin-bottom: 3vh;
+            border: 1px solid #9332C0;
+            background-color: #16191C;
+            color: #fff;
+            border-radius: 10px;
+            font-weight: 900;
         }
 
         #containerEventDetails{
@@ -109,6 +133,7 @@
 </head>
 <body id="PageBody" runat="server">
     <form id="form1" runat="server">
+
             <asp:Panel ID="PanelSuperior" runat="server">
                 <div style="display: flex; align-items: center; justify-content: flex-start; flex-grow: 1;">
                     <asp:ImageButton ID="ImageButton8" runat="server" Height="40px" Width="40px" ImageUrl="img\logout.png" />
@@ -154,11 +179,13 @@
                 </div>
                 <div id="containerForumEvent">
                     <asp:Label ID="titleForum" CssClass="titleForum" runat="server" Text="Foro de discusión"></asp:Label>
-                    <div style="display: flex; align-items: center;">
+                    <div style="display: flex; align-items: center; margin-top: 5vh;">
                         <asp:TextBox CssClass="textBoxForumComment" ID="TextBox1" runat="server" Placeholder="Comenté lo que desee, siempre y cuando se mantenga el respeto" TextMode="MultiLine"></asp:TextBox>
-                        <asp:Button ID="buttonPost" CssClass="buttonPost" runat="server" Text="Button" />
+                        <asp:Button ID="buttonPost" CssClass="buttonPost" runat="server" Text="Postear" />
                     </div>
                 </div>
+                <asp:Button ID="buttonRemoveRegis" CssClass="buttonRemoveRegis" runat="server" Text="Retirar inscripción" />
+                <asp:Button ID="buttonSeeCodeEntry" CssClass="buttonSeeCodeEntry" runat="server" Text="Visualizar entrada" />
             </asp:Panel>
     </form>
 </body>

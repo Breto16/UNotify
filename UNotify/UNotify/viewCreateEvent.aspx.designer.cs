@@ -186,6 +186,24 @@ namespace UNotify
         protected global::System.Web.UI.WebControls.TextBox textBoxNameEvent;
 
         /// <summary>
+        /// Control labelDescription.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label labelDescription;
+
+        /// <summary>
+        /// Control textBoxDescription.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox textBoxDescription;
+
+        /// <summary>
         /// Control labelDateTimeEvent.
         /// </summary>
         /// <remarks>
@@ -238,6 +256,24 @@ namespace UNotify
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox textBoxActivities;
+
+        /// <summary>
+        /// Control labelPlace.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label labelPlace;
+
+        /// <summary>
+        /// Control textBoxPlace.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox textBoxPlace;
 
         /// <summary>
         /// Control buttonCreateEvent.

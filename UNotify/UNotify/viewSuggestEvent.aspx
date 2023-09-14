@@ -83,6 +83,7 @@
 <body id="PageBody" runat="server">
     <form id="form1" runat="server">
         <div style="height: 385px">
+
             <asp:Panel ID="PanelSuperior" runat="server">
                 <div style="display: flex; align-items: center; justify-content: flex-start; flex-grow: 1;">
                     <asp:ImageButton ID="btn_logout" runat="server" Height="40px" Width="40px" ImageUrl="img\logout.png" />
@@ -103,6 +104,7 @@
                     <asp:ImageButton ID="btn_user" runat="server" Height="40px" ImageUrl="img\user.png" Width="40px" />
                 </div>
             </asp:Panel>
+
             <asp:Panel ID="Panel1" runat="server" BackColor="#16191C" Height="624px" CssClass="firstContainer" Style="padding-left: 15px;">
                 <div id="containerDataEvent">
                     <asp:Label ID="suggetsEventTitle" runat="server" Text="Crear nuevo evento" Font-Bold="True" CssClass="titleCenter"></asp:Label><br />
