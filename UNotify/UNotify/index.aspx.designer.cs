@@ -11,7 +11,7 @@ namespace UNotify
 {
 
 
-    public partial class viewSuggestEvent
+    public partial class index
     {
 
         /// <summary>

@@ -11,7 +11,7 @@ namespace UNotify
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            PageBody.Attributes.Add("bgcolor", "1E2126");
         }
     }
 }

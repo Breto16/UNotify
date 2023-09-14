@@ -23,9 +23,9 @@
         }
 
         .buttonPost{
-            width: 13vw;
+            width: 14vw;
             height: 5vh;
-            margin-left: 10px;
+            margin-left: 10vw;
             margin-bottom: 20px;
             border: 1px solid #9332C0;
             border-radius: 10px;
@@ -63,6 +63,30 @@
             font-size: 1.3em;
             font-weight: 900;
             margin: 10px 0;
+        }
+
+        .buttonRemoveRegis{
+            width: 12vw;
+            height: 7vh;
+            margin-left: 3vw;
+            margin-bottom: 3vh;
+            border: 1px solid #9332C0;
+            background-color: #16191C;
+            color: #fff;
+            border-radius: 10px;
+            font-weight: 900;
+        }
+
+        .buttonSeeCodeEntry{
+            width: 12vw;
+            height: 7vh;
+            margin-left: 3vw;
+            margin-bottom: 3vh;
+            border: 1px solid #9332C0;
+            background-color: #16191C;
+            color: #fff;
+            border-radius: 10px;
+            font-weight: 900;
         }
 
         #containerEventDetails{
@@ -104,14 +128,14 @@
                 <asp:Label ID="lbl_colabs" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Añadir Colaborador"></asp:Label>
                 <asp:ImageButton ID="ImageButton5" runat="server" Height="40px" ImageUrl="img\explorar.png" Width="40px" />
                 <asp:Label ID="lbl_explorar" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Explorar"></asp:Label>
-                <asp:ImageButton ID="ImageButton2" runat="server" Height="40px" ImageUrl="img\new-document.png" Width="40px" OnClick="ImageButton2_Click"/>
+                <asp:ImageButton ID="ImageButton2" runat="server" Height="40px" ImageUrl="img\new-document.png" Width="40px"/>
                 <asp:Label ID="lbl_sugerir" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Sugerir Evento"></asp:Label>
                 <asp:ImageButton ID="ImageButton6" runat="server" Height="40px" ImageUrl="img\calendar.png" Width="40px" />
                 <asp:Label ID="Label2" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Calendario"></asp:Label>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label1" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Nombre de Usuario" ></asp:Label>
                 <asp:ImageButton ID="ImageButton7" runat="server" Height="40px" ImageUrl="img\user.png" Width="40px"/>
 </asp:Panel>
-            <asp:Panel ID="Panel1" runat="server" BackColor="#16191C" Height="549px">
+            <asp:Panel ID="Panel1" runat="server" BackColor="#16191C" Height="594px">
                 <div id="containerTitleEvent">
                     <asp:Label ID="titleEvent" CssClass="nameEvent" runat="server" Text="Nombres del evento"></asp:Label>
                 </div>
@@ -132,11 +156,13 @@
                 </div>
                 <div id="containerForumEvent">
                     <asp:Label ID="titleForum" CssClass="titleForum" runat="server" Text="Foro de discusión"></asp:Label>
-                    <div style="display: flex; align-items: center;">
+                    <div style="display: flex; align-items: center; margin-top: 5vh;">
                         <asp:TextBox CssClass="textBoxForumComment" ID="TextBox1" runat="server" Placeholder="Comenté lo que desee, siempre y cuando se mantenga el respeto" TextMode="MultiLine"></asp:TextBox>
-                        <asp:Button ID="buttonPost" CssClass="buttonPost" runat="server" Text="Button" />
+                        <asp:Button ID="buttonPost" CssClass="buttonPost" runat="server" Text="Postear" />
                     </div>
                 </div>
+                <asp:Button ID="buttonRemoveRegis" CssClass="buttonRemoveRegis" runat="server" Text="Retirar inscripción" />
+                <asp:Button ID="buttonSeeCodeEntry" CssClass="buttonSeeCodeEntry" runat="server" Text="Visualizar entrada" />
             </asp:Panel>
     </form>
 </body>
