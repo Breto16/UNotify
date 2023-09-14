@@ -11,6 +11,8 @@ namespace UNotify
 {
     public partial class Explorar : System.Web.UI.Page
     {
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
             PageBody.Attributes.Add("bgcolor", "1E2126");
@@ -24,6 +26,22 @@ namespace UNotify
             eventRepeater.DataSource = eventData;
             eventRepeater.DataBind();
 
+
+            if (!IsPostBack)
+            {
+                foreach(RepeaterItem item in eventRepeater.Items)
+                {
+                    if (item.ItemType == ListItemType.Item || item.ItemType == ListItemType.AlternatingItem)
+                    {
+                        Button btnGenerar = item.FindControl("btnEjemplo") as Button;
+                        if(btnGenerar != null)
+                        {
+                            string argument = btnGenerar.UniqueID + "$" + btnGenerar.CommandArgument;
+                            Page.ClientScript.RegisterForEventValidation(btnGenerar.UniqueID, argument);
+                        }
+                    }
+                }
+            }
         }
 
         SqlConnection con = new SqlConnection("Data Source=BRETONDESKTOP\\SQLEXPRESS;Initial Catalog=UNotify3.9;Integrated Security=True");
@@ -52,10 +70,17 @@ namespace UNotify
 
         protected void btnEjemplo_Click(object sender, EventArgs e)
         {
-            Button btn = (Button)sender; // Convierte el sender a un control Button
-            string datoComoCadena = btn.CommandArgument;
 
-            pruebaCommand.Text = datoComoCadena;
+            Button botonClickeado = (Button)sender;
+            imagenQr.Visible = true;
+            btnCerrar.Visible = true;
+        }
+
+        protected void cerrar(object sender, EventArgs e)
+        {
+            imagenQr.Visible = false; // Reemplaza con la ruta de tu imagen
+            btnCerrar.Visible = false;
+
         }
 
         protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
