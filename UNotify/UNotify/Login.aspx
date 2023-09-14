@@ -55,7 +55,6 @@
         .form-control {
             margin-bottom: 20px;
         }
-
         .gradient-button {
             background-image: linear-gradient(to right, #4E2386, #B82CBB);
             color: white; /* Cambia el color del texto si es necesario */
@@ -68,7 +67,6 @@
             width: 48%;
             border-radius: 3px;
         }
-
         .gradient-button:hover {
             /* Cambia el color de fondo al pasar el cursor sobre los botones si es necesario */
             background-image: none;
