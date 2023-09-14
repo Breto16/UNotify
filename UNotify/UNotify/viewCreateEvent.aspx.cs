@@ -19,12 +19,9 @@ namespace UNotify
             PageBody.Attributes.Add("bgcolor", "1E2126");
         }
 
-<<<<<<< HEAD
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-38G492P;Initial Catalog=UNotify3.3;Integrated Security=True");
-=======
-        SqlConnection con = new SqlConnection(@"Data Source=SATELLITEPROC50\SQLEXPRESS;Initial Catalog=UNotify3.7;Integrated Security=True");
 
->>>>>>> 90a22a15e3681d1033c1c47f709ca52281a12bd0
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-38G492P;Initial Catalog=UNotify3.3;Integrated Security=True");
+
         protected void buttonCreateEvent_Click(object sender, EventArgs e)
         {
             //Guardar la imagen en la ruta y obtener le nombre de la imagen para la base de datos

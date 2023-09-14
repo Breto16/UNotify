@@ -22,11 +22,5 @@ namespace UNotify
 
     }
 
-    private DataTable ObtenerEventos()
-    {
-        //Implementar la llamada al store procedure
-        //Retornarlo como DataTable
-        DataTable eventData = new DataTable();
-
-    }
+    
 }

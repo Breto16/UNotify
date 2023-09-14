@@ -13,13 +13,18 @@ namespace UNotify
     public partial class index : System.Web.UI.Page
     {
         SqlConnection con = new SqlConnection(@"Data Source=BRETONDESKTOP\SQLEXPRESS;Initial Catalog=UNotify3.7;Integrated Security=True");
-
+        int userId;
         protected void Page_Load(object sender, EventArgs e)
         {
             PageBody.Attributes.Add("bgcolor", "1E2126");
-            if (!string.IsNullOrEmpty(Request.QueryString["userId"]))
+            lbl_colabs.Visible = false;
+            lbl_explorar.Visible = false;
+            lbl_sugerir.Visible = false;
+            lbl_calendar.Visible = false;
+
+            if (!string.IsNullOrEmpty(Request.QueryString["cuentaID"]))
             {
-                int userId = int.Parse(Request.QueryString["userId"]);
+                userId = int.Parse(Request.QueryString["cuentaID"]);
                 lbl_user.Text = userId.ToString();
                 string sqlQuery = "SELECT Nombre FROM Estudiantes WHERE EstudianteID = @UserId";
 
@@ -55,6 +60,10 @@ namespace UNotify
                     }
                 }
             }
+            else
+            {
+                lbl_user.Text = "Usuario no Encontrado";
+            }
         }
 
         protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
@@ -65,6 +74,11 @@ namespace UNotify
         protected void ImageButton8_Click(object sender, ImageClickEventArgs e)
         {
             Response.Redirect("Login.aspx");
+        }
+
+        protected void ImageButton7_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("viewUser.aspx?cuentaID=" + userId);
         }
     }
 }
