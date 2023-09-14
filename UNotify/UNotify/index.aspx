@@ -27,7 +27,7 @@
     <form id="form1" runat="server">
              <asp:Panel ID="PanelSuperior" runat="server">
                  <div style="display: flex; align-items: center; justify-content: flex-start; flex-grow: 1;">
-                     <asp:ImageButton ID="ImageButton8" runat="server" Height="40px" Width="40px" ImageUrl="img\logout.png" />
+                     <asp:ImageButton ID="ImageButton8" runat="server" Height="40px" Width="40px" ImageUrl="img\logout.png" OnClick="ImageButton8_Click" />
                  </div>
                  <div style="display: flex; align-items: center; justify-content: center; margin-right: 20px;">
                      <asp:ImageButton ID="ImageButton1" runat="server" Height="40px" ImageUrl="img\white-home.png" Width="40px" style="margin-right: 20px;" />
@@ -41,7 +41,7 @@
                      <asp:Label ID="Label2" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Calendario" style="margin-right: 20px;" />
                  </div>
                  <div style="display: flex; align-items: center; justify-content: flex-end; flex-grow: 1;">
-                     <asp:Label ID="Label1" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Nombre de Usuario" style="margin-right: 20px;" />
+                     <asp:Label ID="lbl_user" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Nombre de Usuario" style="margin-right: 20px;" />
                      <asp:ImageButton ID="ImageButton7" runat="server" Height="40px" ImageUrl="img\user.png" Width="40px" />
                  </div>
              </asp:Panel>

@@ -110,15 +110,16 @@
                 <br />
                 <br />
                 
-                <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" BorderColor="#9332C0" BorderStyle="None" Placeholder="Email" Height="50px" Width="100%" Font-Names="Segoe UI Light" Font-Size="X-Large" />
+                <asp:TextBox ID="txt_email" runat="server" CssClass="form-control" BorderColor="#9332C0" BorderStyle="None" Placeholder="Email" Height="50px" Width="100%" Font-Names="Segoe UI Light" Font-Size="X-Large" />
                 <br />
                 
-                <asp:TextBox ID="TextBox3" runat="server" CssClass="form-control" BorderColor="#9332C0" BorderStyle="None" Placeholder="Contraseña" Height="50px" Width="100%" Type="password" Font-Names="Segoe UI Light" Font-Size="X-Large" />
+                <asp:TextBox ID="txt_pass" runat="server" CssClass="form-control" BorderColor="#9332C0" BorderStyle="None" Placeholder="Contraseña" Height="50px" Width="100%" Type="password" Font-Names="Segoe UI Light" Font-Size="X-Large" />
                 <br />
+                <asp:Label ID="lbl_error" runat="server" Font-Names="Segoe UI Light" Font-Size="Large" ForeColor="#FF6666"></asp:Label>
                 <div class="button-container">
-                    <asp:Button ID="Button2" runat="server" CssClass="gradient-button" BackColor="#9332C0" BorderStyle="None" Font-Names="Segoe UI Light" ForeColor="White" Text="Iniciar Sesión" Font-Size="Large" />
+                    <asp:Button ID="btn_Login" runat="server" CssClass="gradient-button" BackColor="#9332C0" BorderStyle="None" Font-Names="Segoe UI Light" ForeColor="White" Text="Iniciar Sesión" Font-Size="Large" OnClick="Button2_Click" />
                     <br />
-                    <asp:Button ID="Button3" runat="server" CssClass="gradient-button" BackColor="#9332C0" BorderStyle="None" Font-Names="Segoe UI Light" ForeColor="White" Text="Registrarse" Font-Size="Large" OnClick="Button3_Click" />
+                    <asp:Button ID="btn_registrar" runat="server" CssClass="gradient-button" BackColor="#9332C0" BorderStyle="None" Font-Names="Segoe UI Light" ForeColor="White" Text="Registrarse" Font-Size="Large" OnClick="Button3_Click" />
                 </div>
             </div>
         </div>

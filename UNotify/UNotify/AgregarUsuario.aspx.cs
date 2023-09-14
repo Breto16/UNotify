@@ -16,7 +16,7 @@ namespace UNotify
         {
             PageBody.Attributes.Add("bgcolor", "1E2126");
         }
-        SqlConnection con = new SqlConnection(@"Data Source=BRETONDESKTOP\SQLEXPRESS;Initial Catalog=UNotify3.5;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=BRETONDESKTOP\SQLEXPRESS;Initial Catalog=UNotify3.7;Integrated Security=True");
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
             Response.Redirect("Login.aspx");
