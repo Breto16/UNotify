@@ -51,9 +51,11 @@
             box-sizing: border-box;
             border: 3px solid transparent;
         }
+
         .form-control {
             margin-bottom: 20px;
         }
+
         .gradient-button {
             background-image: linear-gradient(to right, #4E2386, #B82CBB);
             color: white; /* Cambia el color del texto si es necesario */

@@ -7,6 +7,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style>
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
         .titleUser{
             color: #ffffff;
             display: inline-block;
@@ -21,19 +28,23 @@
             font-weight: 900;
         }
 
-        .textBoxInfo{
-            border: 1px solid #9332C0;
-            border-radius: 10px;
-            width: 40%;
-            height:7%;
-            background-color: #16191C;
-            color: #ffffff;
+        input[type="text"] {
+            background-color: #1E2126; /* Tonalidad gris */
+            color: white; /* Color de fuente blanco */
+            border: none; /* Sin borde */
+            padding: 8px; /* Ajusta el espaciado según tus necesidades */
+            border-radius: 5px; /* Borde redondeado de 5 píxeles */
+            box-sizing: border-box;
+            border: 3px solid transparent;
+            width: 30vw;
+            height: 8vh;
         }
 
         .panelInfoUser{
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 100vh;
         }
 
         .buttonDelete{
@@ -41,8 +52,8 @@
             margin-left: 20px;
             border: 2px solid red;
             border-radius: 5px;
-            width: 20%;
-            height: 10%;
+            width: 25vw;
+            height: 10vh;
             color: #ffffff;
         }
 
@@ -50,46 +61,60 @@
             border: 2px solid #9332C0;
             border-radius: 10px;
             display: inline-block;
-            height: 60%;
+            height: auto;
             width: 75%;
             padding: 20px;
+        }
+
+        #PanelSuperior {
+            display: flex;
+            align-items: center; /* Centra verticalmente el contenido */
+            background-color: #1E2126;
+            height: 50px;
+            justify-content: space-between; /* Alinea los elementos a la izquierda */
+            padding: 0 10px; 
         }
     </style>
 
 </head>
 <body id="PageBody" runat="server">
     <form id="form1" runat="server">
-            <asp:Panel ID="Panel2" runat="server" display="flex" BackColor="#1E2126" Height="45px" HorizontalAlign="Right">
-                <asp:ImageButton ID="ImageButton8" runat="server" Float="right" Height="40px" Width="40px" ImageUrl="img\logout.png"/>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:ImageButton ID="ImageButton1" runat="server" Height="40px" ImageUrl="img\white-home.png" Width="40px" />
-                <asp:ImageButton ID="ImageButton4" runat="server" Height="40px" ImageUrl="img\people.png" Width="40px" />
-                <asp:Label ID="lbl_colabs" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Añadir Colaborador"></asp:Label>
-                <asp:ImageButton ID="ImageButton5" runat="server" Height="40px" ImageUrl="img\explorar.png" Width="40px" />
-                <asp:Label ID="lbl_explorar" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Explorar"></asp:Label>
-                <asp:ImageButton ID="ImageButton2" runat="server" Height="40px" Width="40px" />
-                <asp:Label ID="lbl_sugerir" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Sugerir Evento"></asp:Label>
-                <asp:ImageButton ID="ImageButton6" runat="server" Height="40px" ImageUrl="img\calendar.png" Width="40px" />
-                <asp:Label ID="Label2" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Calendario"></asp:Label>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label1" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Nombre de Usuario" ></asp:Label>
-                <asp:ImageButton ID="ImageButton7" runat="server" Height="40px" ImageUrl="img\user.png" Width="40px"/>
+            <asp:Panel ID="PanelSuperior" runat="server">
+                <div style="display: flex; align-items: center; justify-content: flex-start; flex-grow: 1;">
+                    <asp:ImageButton ID="ImageButton8" runat="server" Height="40px" Width="40px" ImageUrl="img\logout.png" />
+                </div>
+                <div style="display: flex; align-items: center; justify-content: center; margin-right: 20px;">
+                    <asp:ImageButton ID="ImageButton1" runat="server" Height="40px" ImageUrl="img\white-home.png" Width="40px" style="margin-right: 20px;" />
+                    <asp:ImageButton ID="ImageButton4" runat="server" Height="40px" ImageUrl="img\people.png" Width="40px" style="margin-right: 20px;"/>
+                    <asp:Label ID="lbl_colabs" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Añadir Colaborador" style="margin-right: 20px;" />
+                    <asp:ImageButton ID="ImageButton5" runat="server" Height="40px" ImageUrl="img\explorar.png" Width="40px" style="margin-right: 20px;" />
+                    <asp:Label ID="lbl_explorar" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Explorar" style="margin-right: 20px;" />
+                    <asp:ImageButton ID="ImageButton2" runat="server" Height="40px" ImageUrl="img\new-document.png" Width="40px" style="margin-right: 20px;" />
+                    <asp:Label ID="lbl_sugerir" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Sugerir Evento" style="margin-right: 20px;" />
+                    <asp:ImageButton ID="ImageButton6" runat="server" Height="40px" ImageUrl="img\calendar.png" Width="40px" style="margin-right: 20px;" />
+                    <asp:Label ID="Label2" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Calendario" style="margin-right: 20px;" />
+                </div>
+                <div style="display: flex; align-items: center; justify-content: flex-end; flex-grow: 1;">
+                    <asp:Label ID="Label1" runat="server" Font-Names="Segoe UI Light" ForeColor="White" Text="Nombre de Usuario" style="margin-right: 20px;" />
+                    <asp:ImageButton ID="ImageButton7" runat="server" Height="40px" ImageUrl="img\user.png" Width="40px" />
+                </div>
             </asp:Panel>
-            <asp:Panel ID="Panel1" runat="server" BackColor="#16191C" Height="524px" CssClass="panelInfoUser">
+            <asp:Panel ID="Panel1" runat="server" BackColor="#16191C" CssClass="panelInfoUser">
                 <div class="userContainer">
                     <asp:ImageMap ID="perfilImage" runat="server" Height="60px" ImageUrl="img\user.png" Width="60px">
                     </asp:ImageMap>
                     <asp:Label ID="perfilNameTitle" CssClass="titleUser" runat="server" Text="Nombre de usuario"></asp:Label><br />
 
-                    <asp:Label ID="labelEmailAsociado" CssClass="labelInfo" runat="server" Text="Email asociado"></asp:Label><br />
-                    <asp:TextBox ID="textBoxEmailAsociado" CssClass="textBoxInfo" runat="server" ReadOnly="true"></asp:TextBox><br /><br />
+                    <asp:Label ID="labelEmailAsociado" CssClass="labelInfo" runat="server" Text="Email asociado" Font-Names="Segoe UI" Font-Size="X-Large"></asp:Label><br />
+                    <asp:TextBox ID="textBoxEmailAsociado" CssClass="textBoxInfo" runat="server" ReadOnly="true" Font-Names="Segoe UI Light" Font-Size="X-Large"></asp:TextBox><br /><br />
 
-                    <asp:Label ID="labelCedulaAsociada" CssClass="labelInfo" runat="server" Text="Cédula asociada"></asp:Label><br />
-                    <asp:TextBox ID="textBoxCedulaAsociada" CssClass="textBoxInfo" runat="server" ReadOnly="true"></asp:TextBox><br /><br />
+                    <asp:Label ID="labelCedulaAsociada" CssClass="labelInfo" runat="server" Text="Cédula asociada" Font-Names="Segoe UI" Font-Size="X-Large"></asp:Label><br />
+                    <asp:TextBox ID="textBoxCedulaAsociada" CssClass="textBoxInfo" runat="server" ReadOnly="true" Font-Names="Segoe UI Light"></asp:TextBox><br /><br />
 
-                    <asp:Label ID="labelEsColab" CssClass="labelInfo" runat="server" Text="Es colaborador:"></asp:Label><br />
-                    <asp:TextBox ID="textEsColab" CssClass="textBoxInfo" runat="server" ReadOnly="true"></asp:TextBox><br /><br />
+                    <asp:Label ID="labelEsColab" CssClass="labelInfo" runat="server" Text="Es colaborador:" Font-Names="Segoe UI" Font-Size="X-Large"></asp:Label><br />
+                    <asp:TextBox ID="textEsColab" CssClass="textBoxInfo" runat="server" ReadOnly="true" Font-Names="Segoe UI Light" Font-Size="X-Large"></asp:TextBox><br /><br />
 
-                    <asp:Button ID="buttonDelete" runat="server" Text="Eliminar cuenta" CssClass="buttonDelete"/>
+                    <asp:Button ID="buttonDelete" runat="server" Text="Eliminar cuenta" CssClass="buttonDelete" Font-Names="Segoe UI Light" Font-Size="X-Large"/>
                 </div>
             </asp:Panel>
     </form>
