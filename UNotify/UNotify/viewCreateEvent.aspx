@@ -57,14 +57,13 @@
 
         .firstContainer{
             display:flex;
-            justify-content: space-betwwen;
             align-items: center;
         }
 
         #containerDataEvent{
             display: inline-block;
             width: 50%;
-            height: 70%;
+            height: 100%;
         }
 
         #containerColabs{
@@ -72,6 +71,7 @@
              width: 50%;
              height: 70%;
         }
+
         #PanelSuperior {
             display: flex;
             align-items: center; /* Centra verticalmente el contenido */
@@ -105,33 +105,35 @@
                     <asp:ImageButton ID="ImageButton7" runat="server" Height="40px" ImageUrl="img\user.png" Width="40px" />
                 </div>
             </asp:Panel>
-            <asp:Panel ID="Panel1" runat="server" BackColor="#16191C" Height="624px" CssClass="firstContainer" Style="padding-left: 15px;">
-                <div id="containerDataEvent">
-                    <asp:Label ID="createEventTitle" runat="server" Text="Crear nuevo evento" Font-Bold="True" CssClass="titleCenter"></asp:Label><br />
+            <asp:Panel ID="Panel1" runat="server" BackColor="#16191C" CssClass="firstContainer" Style="padding-left: 15px; height: auto;">
+                <div style="display: flex; justify-content: space-between;">
+                    <div id="containerDataEvent">
+                        <asp:Label ID="createEventTitle" runat="server" Text="Crear nuevo evento" Font-Bold="True" CssClass="titleCenter"></asp:Label><br />
 
-                    <asp:Label ID="labelNameEvent" CssClass="labelEventForm" runat="server" Text="Ingresa el nombre del evento"></asp:Label><br />
-                    <asp:TextBox ID="textBoxNameEvent" CssClass="textBoxEvent" runat="server" Placeholder="Puede contener hasta 90 carácteres"></asp:TextBox><br />
+                        <asp:Label ID="labelNameEvent" CssClass="labelEventForm" runat="server" Text="Ingresa el nombre del evento"></asp:Label><br />
+                        <asp:TextBox ID="textBoxNameEvent" CssClass="textBoxEvent" runat="server" Placeholder="Puede contener hasta 90 carácteres"></asp:TextBox><br />
 
-                    <asp:Label ID="labelDescription" CssClass="labelEventForm" runat="server" Text="Agrega la descripción del evento"></asp:Label><br />
-                    <asp:TextBox ID="textBoxDescription" CssClass="textBoxEvent" runat="server" Placeholder="Sea descriptivo (No superé los 100 carácteres)" TextMode="MultiLine"></asp:TextBox>
+                        <asp:Label ID="labelDescription" CssClass="labelEventForm" runat="server" Text="Agrega la descripción del evento"></asp:Label><br />
+                        <asp:TextBox ID="textBoxDescription" CssClass="textBoxEvent" runat="server" Placeholder="Sea descriptivo (No superé los 100 carácteres)" TextMode="MultiLine"></asp:TextBox>
 
-                    <asp:Label ID="labelDateTimeEvent" CssClass="labelEventForm" runat="server" Text="I">Ingresa el dia y la hora (inicio-fin) del evento</asp:Label><br />
-                    <asp:TextBox ID="textBoxDateTimeEvent" CssClass="textBoxEvent" runat="server" Placeholder="Debe ser en el formato DD/MM/AAAA XX-XX:XX"></asp:TextBox><br />
+                        <asp:Label ID="labelDateTimeEvent" CssClass="labelEventForm" runat="server" Text="I">Ingresa el dia y la hora (inicio-fin) del evento</asp:Label><br />
+                        <asp:TextBox ID="textBoxDateTimeEvent" CssClass="textBoxEvent" runat="server" Placeholder="Debe ser en el formato DD/MM/AAAA XX-XX:XX"></asp:TextBox><br />
 
-                    <asp:Label ID="labelCapacityMax" CssClass="labelEventForm" runat="server" Text="Ingresa la capacidad máxima de personas del evento"></asp:Label><br />
-                    <asp:TextBox ID="textBoxCapacityMax" CssClass="textBoxEvent" runat="server" Placeholder="Debe ser número entero"></asp:TextBox><br />
+                        <asp:Label ID="labelCapacityMax" CssClass="labelEventForm" runat="server" Text="Ingresa la capacidad máxima de personas del evento"></asp:Label><br />
+                        <asp:TextBox ID="textBoxCapacityMax" CssClass="textBoxEvent" runat="server" Placeholder="Debe ser número entero"></asp:TextBox><br />
 
-                    <asp:Label ID="labelActivities" CssClass="labelEventForm" runat="server" Text="Agrega las actividades que se harán en el evento"></asp:Label><br />
-                    <asp:TextBox ID="textBoxActivities" CssClass="textBoxEvent" runat="server" Placeholder="Utiliza preferiblemente viñetas" TextMode="MultiLine"></asp:TextBox>
+                        <asp:Label ID="labelActivities" CssClass="labelEventForm" runat="server" Text="Agrega las actividades que se harán en el evento"></asp:Label><br />
+                        <asp:TextBox ID="textBoxActivities" CssClass="textBoxEvent" runat="server" Placeholder="Utiliza preferiblemente viñetas" TextMode="MultiLine"></asp:TextBox>
 
-                    <asp:Label ID="labelPlace" CssClass="labelEventForm" runat="server" Text="Ingresa el lugar donde se va a realizar el evento"></asp:Label><br />
-                    <asp:TextBox ID="textBoxPlace" CssClass="textBoxEvent" runat="server" Placeholder="Sea muy descriptivo del lugar (No superé los 100 carácteres)" TextMode="MultiLine"></asp:TextBox>
+                        <asp:Label ID="labelPlace" CssClass="labelEventForm" runat="server" Text="Ingresa el lugar donde se va a realizar el evento"></asp:Label><br />
+                        <asp:TextBox ID="textBoxPlace" CssClass="textBoxEvent" runat="server" Placeholder="Sea muy descriptivo del lugar (No superé los 100 carácteres)" TextMode="MultiLine"></asp:TextBox>
 
-                    <asp:Button ID="buttonCreateEvent" runat="server" Text="Crear Evento" CssClass="buttonEvent"/>
-                </div>
-                <div id="containerColabs">
-                    <asp:Label ID="titleColabs" runat="server" Text="Agregar colaboradores" Font-Bold="True" CssClass="titleCenter"></asp:Label><br />
-                    <asp:Label ID="Label3" runat="server" Text="* Username colaborador"></asp:Label>
+                        <asp:Button ID="buttonCreateEvent" runat="server" Text="Crear Evento" CssClass="buttonEvent"/>
+                    </div>
+                    <div id="containerColabs">
+                        <asp:Label ID="titleColabs" runat="server" Text="Agregar colaboradores" Font-Bold="True" CssClass="titleCenter"></asp:Label><br />
+                        <asp:Label ID="Label3" runat="server" Text="* Username colaborador"></asp:Label>
+                    </div>
                 </div>
             </asp:Panel>
         </div>
