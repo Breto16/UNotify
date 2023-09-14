@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace UNotify
 {
-    public partial class viewCreateEvent : System.Web.UI.Page
+    public partial class AgregarUsuario : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            PageBody.Attributes.Add("bgcolor", "1E2126");
+
         }
     }
 }

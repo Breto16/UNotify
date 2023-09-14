@@ -33,40 +33,40 @@ namespace UNotify
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control Panel2.
+        /// Control PanelSuperior.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel2;
+        protected global::System.Web.UI.WebControls.Panel PanelSuperior;
 
         /// <summary>
-        /// Control ImageButton8.
+        /// Control btn_logout.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton8;
+        protected global::System.Web.UI.WebControls.ImageButton btn_logout;
 
         /// <summary>
-        /// Control ImageButton1.
+        /// Control btn_home.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
+        protected global::System.Web.UI.WebControls.ImageButton btn_home;
 
         /// <summary>
-        /// Control ImageButton4.
+        /// Control btn_colabs.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton4;
+        protected global::System.Web.UI.WebControls.ImageButton btn_colabs;
 
         /// <summary>
         /// Control lbl_colabs.
@@ -78,13 +78,13 @@ namespace UNotify
         protected global::System.Web.UI.WebControls.Label lbl_colabs;
 
         /// <summary>
-        /// Control ImageButton5.
+        /// Control btn_Explorar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton5;
+        protected global::System.Web.UI.WebControls.ImageButton btn_Explorar;
 
         /// <summary>
         /// Control lbl_explorar.
@@ -96,13 +96,13 @@ namespace UNotify
         protected global::System.Web.UI.WebControls.Label lbl_explorar;
 
         /// <summary>
-        /// Control ImageButton2.
+        /// Control btn_Sugerir.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton2;
+        protected global::System.Web.UI.WebControls.ImageButton btn_Sugerir;
 
         /// <summary>
         /// Control lbl_sugerir.
@@ -114,40 +114,40 @@ namespace UNotify
         protected global::System.Web.UI.WebControls.Label lbl_sugerir;
 
         /// <summary>
-        /// Control ImageButton6.
+        /// Control btn_calendar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton6;
+        protected global::System.Web.UI.WebControls.ImageButton btn_calendar;
 
         /// <summary>
-        /// Control Label2.
+        /// Control lbl_calendar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label lbl_calendar;
 
         /// <summary>
-        /// Control Label1.
+        /// Control lbl_user.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lbl_user;
 
         /// <summary>
-        /// Control ImageButton7.
+        /// Control btn_user.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton7;
+        protected global::System.Web.UI.WebControls.ImageButton btn_user;
 
         /// <summary>
         /// Control Panel1.
