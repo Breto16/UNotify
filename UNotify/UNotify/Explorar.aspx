@@ -85,6 +85,13 @@
             justify-content: flex-start; /* Alinea los elementos a la izquierda */
             padding: 0 10px; 
         }
+
+        .event{
+            margin-left: 10px;
+            font-family: 'Segoe UI Light';
+            width: 25%;
+            color: #ffffff;
+        }
     </style>
 </head>
 <body id="PageBody" runat="server">
@@ -111,8 +118,22 @@
 </asp:Panel>
 
         <div class="container">
-            
+            <asp:Repeater ID="eventRepeater" runat="server">
+                <ItemTemplate>
+                    <div class="event">
+                        <asp:Image ID="eventImage" runat="server" ImageUrl='<%# "img/" + Eval("NombreImagen") %>' AlternateText="Imagen del Evento" Style="width: 250px; height: 250px;"/>
+                        <h2><%# Eval("Nombre") %></h2>
+                        <p>Descripción: <%# Eval("Descripcion") %></p>
+                        <p>Fecha: <%# Eval("Fecha", "{0:MM/dd/yyyy}") %></p>
+                        <p>Hora: <%# Eval("Hora") %></p>
+                        <p>Lugar: <%# Eval("Lugar") %></p>
+                        <p>Capacidad máxima: <%# Eval("Capacidad") %></p>  
+                        <p></p>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
         </div>
+
     </form>
 </body>
 </html>
